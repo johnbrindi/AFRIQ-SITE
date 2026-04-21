@@ -4,20 +4,27 @@ import { useState, Suspense } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import Link from 'next/link';
 
 function AuthForm() {
   const [tab, setTab] = useState<'login' | 'signup'>('login');
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [academicBg, setAcademicBg] = useState<string>('');
+  
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors }, watch } = useForm();
+  const passwordValue = watch('password');
 
   const onSubmit = async (data: any) => {
     setLoading(true);
     setError(null);
+    setSuccess(null);
 
     if (tab === 'login') {
       const res = await signIn('credentials', {
@@ -28,122 +35,284 @@ function AuthForm() {
 
       if (res?.error) {
         setError('Invalid email or password. Please try again.');
+        setLoading(false);
       } else {
-        router.push(callbackUrl);
-        router.refresh();
+        setSuccess('Successfully signed in! Redirecting...');
+        // Small delay to show success message before redirecting
+        setTimeout(() => {
+          router.push(callbackUrl);
+          router.refresh();
+        }, 1000);
       }
     } else {
-      setTab('login');
-      setError('Account creation is done by your institution. Please sign in with your credentials.');
-    }
+      // Validation for signup
+      if (data.password !== data.confirmPassword) {
+        setError('Passwords do not match.');
+        setLoading(false);
+        return;
+      }
+      
+      if (!academicBg) {
+        setError('Please select your academic background.');
+        setLoading(false);
+        return;
+      }
 
-    setLoading(false);
+      // Handle signup
+      try {
+        const res = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            phone: data.phone,
+            password: data.password,
+            academicBackground: academicBg,
+          }),
+        });
+
+        const result = await res.json();
+
+        if (!res.ok) {
+          setError(result.message || 'Failed to create account.');
+          setLoading(false);
+        } else {
+          setSuccess('Account created successfully! Signing you in...');
+          
+          // Auto login after successful registration
+          const signInRes = await signIn('credentials', {
+            redirect: false,
+            email: data.email,
+            password: data.password,
+          });
+
+          if (signInRes?.error) {
+            setTab('login');
+            setError('Account created, but auto-login failed. Please sign in manually.');
+            setSuccess(null);
+            setLoading(false);
+          } else {
+            setTimeout(() => {
+              router.push(callbackUrl);
+              router.refresh();
+            }, 1000);
+          }
+        }
+      } catch (err) {
+        setError('Network error occurred during registration.');
+        setLoading(false);
+      }
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1a0440] via-brand-purple to-[#2a0b56] py-20 px-5 pt-[100px] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-[-15%] right-[-10%] w-[500px] h-[500px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
-
-      <div className="bg-white rounded-2xl w-full max-w-[440px] shadow-card-lg overflow-hidden animate-fade-in relative z-10">
-        {/* Header tabs */}
-        <div className="bg-gradient-to-br from-brand-purple to-brand-purple2 px-8 pt-8 pb-6">
-          <div className="flex items-center gap-2 mb-5">
-            <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path></svg>
-            </div>
-            <span className="text-white font-black text-[16px] tracking-tight">AFRIQ Portal</span>
-          </div>
-          <div className="flex bg-white/10 rounded-xl p-1">
+    <div className="min-h-screen flex items-center justify-center bg-[#2a0b56] pt-[calc(var(--nav-h)+2rem)] pb-10 px-4">
+      <div className="w-full max-w-[480px] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+        {/* Header Section */}
+        <div className="bg-[#4a2386] px-8 pt-6 pb-6 rounded-t-2xl">
+          <Link href="/" className="inline-flex items-center text-white font-black text-[18px] tracking-tight hover:opacity-80 transition-opacity mb-6">
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            AFRIQ
+          </Link>
+          
+          <div className="flex bg-[#3b1770] rounded-xl p-1.5">
             <button
-              onClick={() => { setTab('login'); setError(null); }}
-              className={`flex-1 py-2 rounded-lg text-[13px] font-semibold transition-all ${tab === 'login' ? 'bg-white text-brand-purple shadow-sm' : 'text-white/65 hover:text-white'}`}
-            >
-              Sign In
-            </button>
-            <button
-              onClick={() => { setTab('signup'); setError(null); }}
-              className={`flex-1 py-2 rounded-lg text-[13px] font-semibold transition-all ${tab === 'signup' ? 'bg-white text-brand-purple shadow-sm' : 'text-white/65 hover:text-white'}`}
+              onClick={() => { setTab('signup'); setError(null); setSuccess(null); }}
+              className={`flex-1 py-2.5 rounded-lg text-[13px] font-semibold transition-all ${tab === 'signup' ? 'bg-[#7342b5] text-white shadow-sm' : 'text-white/60 hover:text-white'}`}
             >
               Create Account
+            </button>
+            <button
+              onClick={() => { setTab('login'); setError(null); setSuccess(null); }}
+              className={`flex-1 py-2.5 rounded-lg text-[13px] font-semibold transition-all ${tab === 'login' ? 'bg-[#7342b5] text-white shadow-sm' : 'text-white/60 hover:text-white'}`}
+            >
+              Sign In
             </button>
           </div>
         </div>
 
-        <div className="p-8 pb-8">
-          <h2 className="font-serif text-[22px] font-black text-brand-slate mb-1">
-            {tab === 'login' ? 'Welcome back' : 'Start your journey'}
+        {/* Body Section */}
+        <div className="px-8 pt-8 pb-8 flex-1 overflow-y-auto max-h-[80vh] custom-scrollbar">
+          <h2 className="font-bold text-[20px] text-brand-slate mb-1">
+            {tab === 'login' ? 'Welcome Back' : 'Start Your Application'}
           </h2>
           <p className="text-[13px] text-brand-muted mb-6">
             {tab === 'login'
-              ? 'Enter your credentials to access your portal.'
-              : 'Create a free account to apply to any university.'}
+              ? 'Sign in to continue your application'
+              : 'Join thousands of students already on AFRIQ'}
           </p>
 
+          {/* Messages */}
           {error && (
-            <div className="bg-red-50 text-red-600 text-[13px] p-3.5 rounded-xl mb-5 font-medium border border-red-100 flex items-start gap-2">
+            <div className="bg-red-50 text-red-600 text-[13px] p-3.5 rounded-xl mb-6 font-medium border border-red-100 flex items-start gap-2">
               <svg className="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
               {error}
             </div>
           )}
+          
+          {success && (
+            <div className="bg-green-50 text-green-600 text-[13px] p-3.5 rounded-xl mb-6 font-medium border border-green-200 flex items-start gap-2">
+              <svg className="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              {success}
+            </div>
+          )}
 
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+          <form method="POST" onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
             {tab === 'signup' && (
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-[11px] font-bold text-brand-mid tracking-[0.5px] uppercase mb-1.5">First Name</label>
-                  <input {...register('firstName', { required: true })} className="w-full text-[14px] text-brand-slate bg-brand-bg border-[1.5px] border-brand-border rounded-xl px-3.5 py-2.5 outline-none focus:border-brand-purple focus:bg-white transition-colors" />
+              <>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">First Name</label>
+                    <input 
+                      {...register('firstName', { required: true })} 
+                      placeholder="Jean"
+                      className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all" 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Last Name</label>
+                    <input 
+                      {...register('lastName', { required: true })} 
+                      placeholder="Kamdem"
+                      className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all" 
+                    />
+                  </div>
                 </div>
+
                 <div>
-                  <label className="block text-[11px] font-bold text-brand-mid tracking-[0.5px] uppercase mb-1.5">Last Name</label>
-                  <input {...register('lastName', { required: true })} className="w-full text-[14px] text-brand-slate bg-brand-bg border-[1.5px] border-brand-border rounded-xl px-3.5 py-2.5 outline-none focus:border-brand-purple focus:bg-white transition-colors" />
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Email Address</label>
+                  <input
+                    type="email"
+                    {...register('email', { required: true })}
+                    placeholder="you@email.com"
+                    className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                  />
                 </div>
-              </div>
+
+                <div>
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Phone Number</label>
+                  <input
+                    type="tel"
+                    {...register('phone', { required: true })}
+                    placeholder="+237 6XX XXX XXX"
+                    className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Password</label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      {...register('password', { required: true })}
+                      placeholder="Min. 8 characters"
+                      className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                    />
+                    <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-brand-muted hover:text-brand-purple transition-colors">
+                      {showPassword ? (
+                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                      ) : (
+                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path></svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Confirm Password</label>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    {...register('confirmPassword', { required: true })}
+                    placeholder="Confirm your password"
+                    className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-2">Academic Background</label>
+                  <div className="grid grid-cols-3 gap-2.5">
+                    <button type="button" onClick={() => setAcademicBg('Sciences')} className={`flex items-center justify-center gap-1.5 text-[11.5px] font-semibold py-2.5 px-1 border rounded-lg transition-all ${academicBg === 'Sciences' ? 'border-brand-purple text-brand-purple bg-brand-purple/5' : 'border-[#e2e8f0] text-brand-slate hover:border-brand-purple/50'}`}>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                      Sciences
+                    </button>
+                    <button type="button" onClick={() => setAcademicBg('Arts & Humanities')} className={`flex items-center justify-center gap-1.5 text-[11.5px] font-semibold py-2.5 px-1 border rounded-lg transition-all ${academicBg === 'Arts & Humanities' ? 'border-brand-purple text-brand-purple bg-brand-purple/5' : 'border-[#e2e8f0] text-brand-slate hover:border-brand-purple/50'}`}>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                      Arts
+                    </button>
+                    <button type="button" onClick={() => setAcademicBg('Technical / Vocational')} className={`flex items-center justify-center gap-1.5 text-[11.5px] font-semibold py-2.5 px-1 border rounded-lg transition-all ${academicBg === 'Technical / Vocational' ? 'border-brand-purple text-brand-purple bg-brand-purple/5' : 'border-[#e2e8f0] text-brand-slate hover:border-brand-purple/50'}`}>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                      Technical
+                    </button>
+                  </div>
+                </div>
+              </>
             )}
 
-            <div>
-              <label className="block text-[11px] font-bold text-brand-mid tracking-[0.5px] uppercase mb-1.5">Email Address</label>
-              <input
-                type="email"
-                {...register('email', { required: true })}
-                placeholder="you@example.com"
-                className="w-full text-[14px] text-brand-slate bg-brand-bg border-[1.5px] border-brand-border rounded-xl px-3.5 py-2.5 outline-none focus:border-brand-purple focus:bg-white transition-colors"
-              />
-            </div>
+            {tab === 'login' && (
+              <>
+                <div>
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Email Address</label>
+                  <input
+                    type="email"
+                    {...register('email', { required: true })}
+                    placeholder="you@email.com"
+                    className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                  />
+                </div>
 
-            <div>
-              <label className="block text-[11px] font-bold text-brand-mid tracking-[0.5px] uppercase mb-1.5">Password</label>
-              <input
-                type="password"
-                {...register('password', { required: true })}
-                placeholder="••••••••"
-                className="w-full text-[14px] text-brand-slate bg-brand-bg border-[1.5px] border-brand-border rounded-xl px-3.5 py-2.5 outline-none focus:border-brand-purple focus:bg-white transition-colors"
-              />
-            </div>
+                <div>
+                  <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">Password</label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      {...register('password', { required: true })}
+                      placeholder="Your password"
+                      className="w-full text-[14px] text-brand-slate bg-white border border-[#e2e8f0] rounded-lg px-3.5 py-2.5 outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                    />
+                    <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-brand-muted hover:text-brand-purple transition-colors">
+                      {showPassword ? (
+                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                      ) : (
+                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path></svg>
+                      )}
+                    </button>
+                  </div>
+                  <div className="text-right mt-1.5">
+                    <button type="button" className="text-[11.5px] font-bold text-brand-purple hover:underline">Forgot password?</button>
+                  </div>
+                </div>
+              </>
+            )}
 
             <button
               disabled={loading}
               type="submit"
-              className="w-full text-[14px] font-bold text-white bg-brand-purple border-none p-3.5 rounded-xl hover:bg-brand-purple2 hover:-translate-y-px hover:shadow-card transition-all mt-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full text-[14px] font-bold text-white bg-[#4a2386] border-none py-3.5 rounded-lg hover:bg-[#3b1770] transition-colors mt-2 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
                   <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
                   Processing...
                 </>
-              ) : tab === 'login' ? 'Sign In to Portal' : 'Create Account'}
+              ) : tab === 'login' ? (
+                <>Sign In <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path></svg></>
+              ) : (
+                <>Create Account & Explore <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path></svg></>
+              )}
             </button>
           </form>
 
-          <div className="relative text-center text-[12px] text-brand-muted my-5">
-            <span className="relative z-10 bg-white px-3">or continue with</span>
-            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-brand-border" />
+          <div className="flex items-center my-6">
+            <div className="flex-1 h-[1px] bg-[#e2e8f0]"></div>
+            <span className="px-3 text-[11.5px] font-medium text-brand-muted">or</span>
+            <div className="flex-1 h-[1px] bg-[#e2e8f0]"></div>
           </div>
 
           <button
             onClick={() => signIn('google', { callbackUrl })}
-            className="w-full text-[13px] font-semibold text-brand-mid bg-white border-[1.5px] border-brand-border p-3 rounded-xl hover:border-brand-purple hover:bg-brand-pale transition-colors flex items-center justify-center gap-2.5"
+            className="w-full text-[13px] font-bold text-brand-slate bg-white border border-[#e2e8f0] py-3 rounded-lg hover:bg-brand-pale transition-colors flex items-center justify-center gap-2.5"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -153,15 +322,31 @@ function AuthForm() {
             </svg>
             Continue with Google
           </button>
+          
+          <div className="mt-6 text-center text-[12.5px] text-brand-muted">
+            {tab === 'login' ? (
+              <>No account? <button type="button" onClick={() => { setTab('signup'); setError(null); setSuccess(null); }} className="font-bold text-[#4a2386] hover:underline">Sign up free</button></>
+            ) : (
+              <>Already have an account? <button type="button" onClick={() => { setTab('login'); setError(null); setSuccess(null); }} className="font-bold text-[#4a2386] hover:underline">Sign in</button></>
+            )}
+          </div>
         </div>
       </div>
+      
+      {/* Scrollbar hide style block for this specific component */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb { background: #cbd5e1; }
+      `}} />
     </div>
   );
 }
 
 export default function AuthPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-brand-purple" />}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#2a0b56]"><div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div></div>}>
       <AuthForm />
     </Suspense>
   );
