@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --p: #4b1d79;
+    --p2: #6b2fa0;
+    --p3: #9333ea;
+    --pale: #f3eef9;
+    --gold: #c9a227;
+    --gold2: #e8c84a;
+    --white: #fff;
+    --slate: #111118;
+    --mid: #44444f;
+    --muted: #7a7a8c;
+    --bg: #f8f7fc;
+    --border: #e6e0f0;
+    --card: #ffffff;
+    --r: 12px;
+    --nav-h: 64px;
+    --max-w: 1200px;
+    --px: 80px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--slate);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* You can add complex component styles here if needed, 
+     but most should be moved to Tailwind classes in components */
+}

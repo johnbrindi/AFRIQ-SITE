@@ -1,0 +1,2983 @@
+[
+  {
+    "university_id": 0,
+    "schools": [
+      {
+        "n": "College of Technology",
+        "acr": "COLTECH",
+        "t": "School",
+        "i": "tech",
+        "departments": [
+          "Agribusiness Technology",
+          "Agricultural & Environmental Engineering",
+          "Animal Production Technology",
+          "Crop Production Technology",
+          "Nutrition & Bio-Resource Technology",
+          "Forestry & Wildlife Technology",
+          "Electrical & Electronics Engineering",
+          "Data Science",
+          "Computer Networks",
+          "Software Engineering"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "North West",
+              "South West",
+              "Centre",
+              "Littoral",
+              "West",
+              "Adamawa",
+              "North",
+              "Far North",
+              "East",
+              "South"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "subDivTown",
+            "label": "Sub-Division & Town of Residence",
+            "type": "text",
+            "placeholder": "e.g. Bamenda I, Bamenda"
+          },
+          {
+            "key": "motherName",
+            "label": "Mother's Full Name",
+            "type": "text",
+            "placeholder": "Mother's name"
+          },
+          {
+            "key": "fatherName",
+            "label": "Father's Full Name",
+            "type": "text",
+            "placeholder": "Father's name"
+          },
+          {
+            "key": "motherContact",
+            "label": "Mother's Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherContact",
+            "label": "Father's Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "motherTown",
+            "label": "Mother's Town of Residence",
+            "type": "text",
+            "placeholder": "Town name"
+          },
+          {
+            "key": "fatherTown",
+            "label": "Father's Town of Residence",
+            "type": "text",
+            "placeholder": "Town name"
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Department",
+            "type": "deptSelect"
+          },
+          {
+            "key": "choice2",
+            "label": "2nd Choice Department",
+            "type": "deptSelect"
+          },
+          {
+            "key": "choice3",
+            "label": "3rd Choice Department",
+            "type": "deptSelect"
+          },
+          {
+            "key": "olPoints",
+            "label": "Total Points at O/L",
+            "type": "number",
+            "placeholder": "e.g. 32"
+          },
+          {
+            "key": "alPoints",
+            "label": "Total Points at A/L",
+            "type": "number",
+            "placeholder": "e.g. 14"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Birth Certificate & Photocopy",
+            "amount": 2100
+          },
+          {
+            "label": "AL & OL Slips & Photocopy",
+            "amount": 3000
+          },
+          {
+            "label": "4 Passport Photos (prepared by us)",
+            "amount": 1500
+          },
+          {
+            "label": "AL & OL Transcript",
+            "amount": 3000
+          },
+          {
+            "label": "Bank Receipt (paid by us)",
+            "amount": 20600
+          }
+        ]
+      },
+      {
+        "n": "National Higher Polytechnic Institute",
+        "acr": "NAHPI",
+        "t": "School",
+        "i": "poly",
+        "departments": [
+          "Civil & Building Engineering (CBE)",
+          "Civil Engineering (CVLE)",
+          "Computer & Mechatronics Engineering (COME)",
+          "Electrical & Electronics Engineering (EEE)",
+          "Mechanical Engineering (MECE)",
+          "Mining & Mineral Engineering",
+          "Petroleum Engineering Technology (PETE)"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "phone",
+            "label": "Contact / Phone",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "olPoints",
+            "label": "O/L Total Points",
+            "type": "number",
+            "placeholder": "e.g. 32"
+          },
+          {
+            "key": "alPoints",
+            "label": "A/L Total Points",
+            "type": "number",
+            "placeholder": "e.g. 14"
+          },
+          {
+            "key": "mathPhyOL",
+            "label": "Grade in Math & Physics at O/L",
+            "type": "text",
+            "placeholder": "e.g. A1, B2"
+          },
+          {
+            "key": "mathAL",
+            "label": "Grade in Math at A/L",
+            "type": "text",
+            "placeholder": "e.g. A, B"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Bank Receipt (paid by us)",
+            "amount": 20600
+          },
+          {
+            "label": "Birth Certificate",
+            "amount": 2100
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "OL & AL Slips",
+            "amount": 3000
+          },
+          {
+            "label": "OL & AL Transcript",
+            "amount": 3000
+          },
+          {
+            "label": "4 Passport Photos",
+            "amount": 1500
+          },
+          {
+            "label": "Self-Addressed Envelope",
+            "amount": 1800
+          },
+          {
+            "label": "Online Registration Form",
+            "amount": 1000
+          },
+          {
+            "label": "Miscellaneous",
+            "amount": 1000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Sciences",
+        "acr": "FS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochemistry",
+          "Chemistry",
+          "Geology, Mining & Environmental Science",
+          "Mathematics & Computer Science",
+          "Microbiology & Parasitology",
+          "Physics",
+          "Zoology",
+          "Plant Sciences"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "olMath",
+            "label": "GCE O/L Mathematics Grade",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "olPoints",
+            "label": "Total GCE O/L Points",
+            "type": "number",
+            "placeholder": "e.g. 25"
+          },
+          {
+            "key": "alPoints",
+            "label": "Total GCE A/L Points",
+            "type": "number",
+            "placeholder": "e.g. 10"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Admission Application Fee (Bank)",
+            "amount": 10000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "Medical Certificate (University Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips",
+            "amount": 2000
+          },
+          {
+            "label": "Administrative Processing",
+            "amount": 2000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Arts",
+        "acr": "FA",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "BTech in Daidatics, Curriculum development and Teaching",
+          "BSC in communication and development studies",
+          "BSC in Geography and planning",
+          "BA in History and Archeology",
+          "BA in Economic and Social Development History",
+          "BA in Heritage and Cultural history",
+          "BA in History and Public policy",
+          "BA in international studies",
+          "BA in English Language",
+          "BA in literature in English",
+          "BA in linguistics and African languages",
+          "BA in theater, television and film studies",
+          "BA in visual Arts and History of Arts",
+          "BA in philosophy",
+          "BA in translation and interpretation",
+          "BA in intercultural communication and mediation",
+          "BA in Cameroonian languages and cultures",
+          "BA in language and development",
+          "BA in National language study",
+          "BA in music and dance",
+          "BA in bilingual letters"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "alSubjects",
+            "label": "GCE A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. HIS, GEO, LIT"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Admission Application Fee (Bank)",
+            "amount": 10000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "Medical Certificate (University Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips",
+            "amount": 2000
+          },
+          {
+            "label": "Administrative Processing",
+            "amount": 2000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Education and Management Sciences",
+        "acr": "FEMS",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accountancy",
+          "Banking & Finance",
+          "Management",
+          "Economics",
+          "Marketing",
+          "Human Resource Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "olMath",
+            "label": "GCE O/L Mathematics Grade (Required)",
+            "type": "text"
+          },
+          {
+            "key": "alPoints",
+            "label": "GCE A/L Points",
+            "type": "number"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Admission Application Fee (Bank)",
+            "amount": 10000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Passport Photos",
+            "amount": 1500
+          },
+          {
+            "label": "Administrative Processing",
+            "amount": 4000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Education",
+        "acr": "FED",
+        "t": "Faculty",
+        "i": "edu",
+        "departments": [
+          "Curriculum Development & Design",
+          "Educational Foundations",
+          "Educational Leadership",
+          "Educational Psychology",
+          "Early Childhood Care and Education"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "qualification",
+            "label": "Current Highest Qualification",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application Fee",
+            "amount": 10000
+          },
+          {
+            "label": "Processing & Files",
+            "amount": 10000
+          }
+        ]
+      },
+      {
+        "n": "Higher Institute of Commerce and Management Sciences",
+        "acr": "HICM",
+        "t": "School",
+        "i": "com",
+        "departments": [
+          "Organizational Sciences",
+          "Marketing",
+          "Money and Banking",
+          "Management and Entrepreneurship",
+          "Accounting and Finance",
+          "Insurance and Security"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "phone",
+            "label": "Phone",
+            "type": "tel"
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Specialty",
+            "type": "deptSelect"
+          },
+          {
+            "key": "choice2",
+            "label": "2nd Choice Specialty",
+            "type": "deptSelect"
+          },
+          {
+            "key": "olMath",
+            "label": "O/L Math Grade",
+            "type": "text"
+          },
+          {
+            "key": "alPoints",
+            "label": "A/L Points",
+            "type": "number"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Application Fee (Bank Receipt)",
+            "amount": 20600
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Birth Certificate",
+            "amount": 2100
+          },
+          {
+            "label": "GCE Result Slips",
+            "amount": 2000
+          },
+          {
+            "label": "Passport Photos (4)",
+            "amount": 1500
+          },
+          {
+            "label": "Stamped Envelope",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "n": "Higher Institute of Transport and Logistics",
+        "acr": "HITL",
+        "t": "School",
+        "i": "log",
+        "departments": [
+          "Maritime Transport",
+          "Land Transport",
+          "Transit & Logistics",
+          "Tourism & Hospitality Management",
+          "Customs",
+          "Shipping Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "choice1",
+            "label": "Transport Specialty Choice",
+            "type": "deptSelect"
+          },
+          {
+            "key": "olMath",
+            "label": "GCE O/L Math Grade",
+            "type": "text"
+          },
+          {
+            "key": "alPoints",
+            "label": "GCE A/L Total Points",
+            "type": "number"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "HITL Concours Fee (Bank)",
+            "amount": 20600
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 2500
+          },
+          {
+            "label": "Certified Documents",
+            "amount": 3000
+          },
+          {
+            "label": "Passport Photos (4)",
+            "amount": 1500
+          },
+          {
+            "label": "Processing & Filing",
+            "amount": 2400
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Health Sciences",
+        "acr": "FHS",
+        "t": "Faculty",
+        "i": "med",
+        "departments": [
+          "Medicine (MD)",
+          "Nursing Science",
+          "Public Health",
+          "Medical Laboratory Sciences",
+          "Pharmacy"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "biocBio",
+            "label": "Grade in Biology (O/L)",
+            "type": "text"
+          },
+          {
+            "key": "biocChem",
+            "label": "Grade in Chemistry (O/L)",
+            "type": "text"
+          },
+          {
+            "key": "alBio",
+            "label": "Grade in Biology (A/L)",
+            "type": "text"
+          },
+          {
+            "key": "alChem",
+            "label": "Grade in Chemistry (A/L)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Medical Concours Fee (Bank)",
+            "amount": 50600
+          },
+          {
+            "label": "Medical Clearance Certificate",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Passport Photos (High Quality)",
+            "amount": 2000
+          },
+          {
+            "label": "Transcript & Slips",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Higher Teachers Training College",
+        "acr": "HTTC",
+        "t": "School",
+        "i": "teach",
+        "departments": [
+          "Bilingual Letters",
+          "Biology",
+          "Chemistry",
+          "Computer Science",
+          "Economics",
+          "English Modern Letters",
+          "French Modern Letters",
+          "Geography",
+          "Geology",
+          "Guidance and Counselling",
+          "History",
+          "Mathematics",
+          "Physics",
+          "Science of Education"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "specialty",
+            "label": "Department of Specialization",
+            "type": "deptSelect"
+          },
+          {
+            "key": "cycle",
+            "label": "Cycle",
+            "type": "select",
+            "options": [
+              "1st Cycle (Degree)",
+              "2nd Cycle (Master's)"
+            ]
+          },
+          {
+            "key": "degRef",
+            "label": "Relevant Bachelor's Degree (if Cycle 2)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "HTTC Concours Fee (Bank Receipt)",
+            "amount": 20600
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Passport Photos (4)",
+            "amount": 1500
+          },
+          {
+            "label": "Stamped Envelope",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ File Processing",
+            "amount": 2000
+          }
+        ]
+      },
+      {
+        "n": "Higher Technical Teacher Training College",
+        "acr": "HTTTC",
+        "t": "School",
+        "i": "teach",
+        "departments": [
+          "Mechanical Engineering",
+          "Civil Engineering & Forestry",
+          "Electrical & Marine Engineering",
+          "Administrative Techniques",
+          "Social Economy & Family Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "techSpecialty",
+            "label": "Technical Specialty",
+            "type": "deptSelect"
+          },
+          {
+            "key": "alTechnical",
+            "label": "Technical A/L Grade/Points",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "HTTTC Concours Fee (Bank)",
+            "amount": 20600
+          },
+          {
+            "label": "Medical & Health Exam",
+            "amount": 3000
+          },
+          {
+            "label": "Passport Photos",
+            "amount": 1500
+          },
+          {
+            "label": "Administrative Documents",
+            "amount": 5300
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Law and Political Sciences",
+        "acr": "FLPS",
+        "t": "Faculty",
+        "i": "law",
+        "departments": [
+          "English Private Law",
+          "Public Law",
+          "Political Science",
+          "French Private Law"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "alPoints",
+            "label": "GCE A/L Total Points",
+            "type": "number"
+          },
+          {
+            "key": "alLaw",
+            "label": "Points in Law/History",
+            "type": "number"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Admission Application Fee",
+            "amount": 10000
+          },
+          {
+            "label": "Certified Documents",
+            "amount": 4000
+          },
+          {
+            "label": "Processing & Registration",
+            "amount": 6000
+          }
+        ]
+      },
+      {
+        "n": "State Registered Nursing",
+        "acr": "SRN",
+        "t": "School",
+        "i": "med",
+        "departments": [
+          "General Nursing (SRN)",
+          "Midwifery",
+          "Nursing Technical"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "gender",
+            "label": "Gender",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "alBio",
+            "label": "Grade in Biology (Required)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "MINSANTE Concours Fee (CAMPOST)",
+            "amount": 20600
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 1500
+          },
+          {
+            "label": "Large Stamped Envelope",
+            "amount": 1500
+          },
+          {
+            "label": "Passport Photos",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Concours Prep Pack",
+            "amount": 2400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 1,
+    "schools": [
+      {
+        "n": "Faculty of Arts",
+        "acr": "FA",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "English",
+          "French",
+          "History",
+          "Linguistics",
+          "Performing/Visual Arts",
+          "Bilingual/Comm. Studies"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "text"
+          },
+          {
+            "key": "olCenter",
+            "label": "O-Level Center/Candidate #",
+            "type": "text"
+          },
+          {
+            "key": "alCenter",
+            "label": "A-Level Center/Candidate #",
+            "type": "text"
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Department",
+            "type": "deptSelect"
+          },
+          {
+            "key": "choice2",
+            "label": "2nd Choice Department",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application/Platform Fee (Online)",
+            "amount": 13000
+          },
+          {
+            "label": "Medical Exam (UB Health Centre)",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Copies & Stamps",
+            "amount": 4000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Science",
+        "acr": "FS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochem/Molecular Biology",
+          "Botany",
+          "Chemistry",
+          "Computer Sci",
+          "Environmental Sci",
+          "Geology",
+          "Math",
+          "Microbiology",
+          "Physics",
+          "Zoology"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "olPoints",
+            "label": "O-Level Total Points",
+            "type": "number"
+          },
+          {
+            "key": "alPoints",
+            "label": "A-Level Total Points",
+            "type": "number"
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Department",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application/Platform Fee (Online)",
+            "amount": 13000
+          },
+          {
+            "label": "Medical Exam (UB Health Centre)",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Copies & Stamps",
+            "amount": 4000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Social & Management Sciences",
+        "acr": "FSMS",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting",
+          "Banking/Finance",
+          "Economics",
+          "Geography",
+          "Journalism",
+          "Management",
+          "Sociology/Anth",
+          "Gender Studies"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Department",
+            "type": "deptSelect"
+          },
+          {
+            "key": "choice2",
+            "label": "2nd Choice Department",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application/Platform Fee (Online)",
+            "amount": 13000
+          },
+          {
+            "label": "Medical Exam (UB Health Centre)",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Copies & Stamps",
+            "amount": 4000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Laws & Political Science",
+        "acr": "FLPS",
+        "t": "Faculty",
+        "i": "law",
+        "departments": [
+          "English Law",
+          "Civil Law",
+          "Business Law",
+          "Pol. Sci/Comp. Politics",
+          "Intl Relations",
+          "Public Law/Admin"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Specialty",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application/Platform Fee (Online)",
+            "amount": 13000
+          },
+          {
+            "label": "Medical Exam (UB Health Centre)",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Copies & Stamps",
+            "amount": 4000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Education",
+        "acr": "FED",
+        "t": "Faculty",
+        "i": "edu",
+        "departments": [
+          "Curriculum Studies",
+          "Educational Foundations",
+          "Educational Psych",
+          "Special Education"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Specialty",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application/Platform Fee (Online)",
+            "amount": 13000
+          },
+          {
+            "label": "Medical Exam (UB Health Centre)",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Copies & Stamps",
+            "amount": 4000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "College of Technology",
+        "acr": "CoT",
+        "t": "School",
+        "i": "poly",
+        "departments": [
+          "Comp. Eng",
+          "Elec/Electronics",
+          "Mech Eng"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "age",
+            "label": "Age (Must be < 29)",
+            "type": "number"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "olPoints",
+            "label": "O-Level Points",
+            "type": "number"
+          },
+          {
+            "key": "alPoints",
+            "label": "A-Level Points",
+            "type": "number"
+          },
+          {
+            "key": "choice1",
+            "label": "1st Choice Specialty",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (Bank Deposit)",
+            "amount": 20000
+          },
+          {
+            "label": "Lab/Practical Fees",
+            "amount": 10000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 5000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Engineering & Technology",
+        "acr": "FET",
+        "t": "Faculty",
+        "i": "tech",
+        "departments": [
+          "Comp. Eng",
+          "Elec/Electronics",
+          "Civil Eng"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "alPoints",
+            "label": "Total GCE A/L Points",
+            "type": "number"
+          },
+          {
+            "key": "choice1",
+            "label": "Engineering Specialty",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (Bank Deposit)",
+            "amount": 20000
+          },
+          {
+            "label": "Lab/Practical Fees",
+            "amount": 10000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 5000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Health Sciences",
+        "acr": "FHS",
+        "t": "Faculty",
+        "i": "med",
+        "departments": [
+          "Medicine",
+          "Nursing",
+          "Med Lab Sci",
+          "Public Health"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "alBio",
+            "label": "Grade in Biology (A-Level)",
+            "type": "text"
+          },
+          {
+            "key": "alChem",
+            "label": "Grade in Chemistry (A-Level)",
+            "type": "text"
+          },
+          {
+            "key": "choice1",
+            "label": "Health Specialty Choice",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (Bank Deposit)",
+            "amount": 20000
+          },
+          {
+            "label": "Medical Cert & Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Copies & Stamps",
+            "amount": 5000
+          },
+          {
+            "label": "AFRIQ Application Pack",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Agriculture and Veterinary Medicine",
+        "acr": "FAVM",
+        "t": "Faculty",
+        "i": "agr",
+        "departments": [
+          "Agribusiness",
+          "Animal Sci",
+          "Crop Prod",
+          "Food Sci",
+          "Forestry",
+          "Fisheries",
+          "Vet Med"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "choice1",
+            "label": "Agric/Vet Specialty",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (Bank Deposit)",
+            "amount": 20000
+          },
+          {
+            "label": "Lab/Field Fees",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 5000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "HTTTC Kumba",
+        "acr": "HTTTC",
+        "t": "School",
+        "i": "teach",
+        "departments": [
+          "Admin Tech",
+          "Civil Eng",
+          "Comp Sci",
+          "Electrical",
+          "Guidance",
+          "Management",
+          "Mechanical",
+          "Ed",
+          "Tourism"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "choice1",
+            "label": "Technical Teaching Specialty",
+            "type": "deptSelect"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (Bank Deposit)",
+            "amount": 20000
+          },
+          {
+            "label": "Lab/Practical Fees",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 5000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 4,
+    "schools": [
+      {
+        "n": "Faculty of Letters & Social Sciences (FLSH)",
+        "acr": "FLSH",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "African Studies",
+          "English",
+          "French",
+          "Geography",
+          "History",
+          "Philosophy",
+          "Psychology",
+          "Sociology",
+          "Bilingual Letters",
+          "Modern Languages",
+          "Applied Foreign Languages"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "text"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "maritalStatus",
+            "label": "Marital Status",
+            "type": "select",
+            "options": [
+              "Single",
+              "Married",
+              "Other"
+            ]
+          },
+          {
+            "key": "bachSeries",
+            "label": "Bac/GCE A-Level Series",
+            "type": "text"
+          },
+          {
+            "key": "bachSession",
+            "label": "Bac/GCE A-Level Session (Year)",
+            "type": "number"
+          },
+          {
+            "key": "bachGrade",
+            "label": "Bac/GCE A-Level Grade/Mention",
+            "type": "text"
+          },
+          {
+            "key": "centerName",
+            "label": "Examination Center Name",
+            "type": "text"
+          },
+          {
+            "key": "bachMatricule",
+            "label": "Bac/GCE A-Level Matricule",
+            "type": "text"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "type": "select",
+            "options": [
+              "Nouveau (New)",
+              "Ancien (Returning)"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee (SIGES Online)",
+            "amount": 0
+          },
+          {
+            "label": "Medical Exam (Centre Médico-Social)",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp (on Form)",
+            "amount": 1500
+          },
+          {
+            "label": "4 Passport Photos (4x4cm)",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 7000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Science (FS)",
+        "acr": "FS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochemistry",
+          "Animal Biology",
+          "Plant Biology",
+          "Chemistry",
+          "Computer Science",
+          "Mathematics",
+          "Physics",
+          "Earth Sciences",
+          "Biomedical Sciences (General track)"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "bachSeries",
+            "label": "Bac/GCE A-Level Series",
+            "type": "text"
+          },
+          {
+            "key": "bachGrade",
+            "label": "Bac/GCE A-Level Grade",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee (SIGES)",
+            "amount": 0
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 8500
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Laws & Political Science (FSJP)",
+        "acr": "FSJP",
+        "t": "Faculty",
+        "i": "law",
+        "departments": [
+          "Public Law",
+          "Private Law",
+          "Political Science",
+          "English Law",
+          "Community Law"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee",
+            "amount": 0
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 8500
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Economics & Management (FSEG)",
+        "acr": "FSEG",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Economics",
+          "Management",
+          "Marketing",
+          "Accounting",
+          "Finance"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee",
+            "amount": 0
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 8500
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Agronomy & Agricultural Sciences (FASA)",
+        "acr": "FASA",
+        "t": "School",
+        "i": "agr",
+        "departments": [
+          "Crop Production",
+          "Animal Production",
+          "Agricultural Economics/Sociology",
+          "Rural Engineering",
+          "Forestry",
+          "Environmental Sciences"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "examCenter",
+            "label": "Exam Center (Dschang, Yde, Dla, etc.)",
+            "type": "text"
+          },
+          {
+            "key": "optPaper",
+            "label": "Optional Paper (Maths/Phys or Maths/Bio)",
+            "type": "text"
+          },
+          {
+            "key": "campusChoice",
+            "label": "Campus Choice (Dschang vs Satellite)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (CBC/EU/EE)",
+            "amount": 20000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 3000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Concours Prep Pack",
+            "amount": 5500
+          }
+        ]
+      },
+      {
+        "n": "IUT Fotso Victor (IUT-FV)",
+        "acr": "IUT-FV",
+        "t": "Institute",
+        "i": "tech",
+        "departments": [
+          "Electrical Engineering (GE)",
+          "Industrial Maintenance (GIM)",
+          "Telecommunications & Networks (RT)",
+          "Thermal & Energy Eng (GTE)",
+          "Civil Engineering (GC)",
+          "Geomatics",
+          "Admin & Commercial Management (GEA)",
+          "Banking & Finance"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "age",
+            "label": "Age (Max 29)",
+            "type": "number"
+          },
+          {
+            "key": "bachSeries",
+            "label": "Bac Series (C, D, E, F, BT)",
+            "type": "text"
+          },
+          {
+            "key": "quitusCode",
+            "label": "Quitus Code (from payment)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (EU/EE)",
+            "amount": 20000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 3000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Registration Support",
+            "amount": 5500
+          }
+        ]
+      },
+      {
+        "n": "Institute of Fine Arts (IBA - Foumban)",
+        "acr": "IBA",
+        "t": "Institute",
+        "i": "arts",
+        "departments": [
+          "Plastic Arts (Painting/Sculpture)",
+          "Decorative Arts (Fashion/Textile)",
+          "Architecture & Engineering Art",
+          "Performing Arts (Cinema/Theater)",
+          "Technology & Heritage (Museum Studies)"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (EU/EE)",
+            "amount": 20000
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 3000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "Practical Test Materials Fee",
+            "amount": 2000
+          },
+          {
+            "label": "AFRIQ Support",
+            "amount": 3500
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Medicine & Pharm. Sciences (FMSP)",
+        "acr": "FMSP",
+        "t": "Faculty",
+        "i": "med",
+        "departments": [
+          "General Medicine",
+          "Pharmacy",
+          "Medical Biology",
+          "Physiotherapy"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "age",
+            "label": "Age (Max 25 for Medicine)",
+            "type": "number"
+          },
+          {
+            "key": "alBio",
+            "label": "Grade in Biology (Required)",
+            "type": "text"
+          },
+          {
+            "key": "alChem",
+            "label": "Grade in Chemistry (Required)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee",
+            "amount": 20000
+          },
+          {
+            "label": "Medical Certificate (Public Doctor)",
+            "amount": 5000
+          },
+          {
+            "label": "Certified Documents",
+            "amount": 3000
+          },
+          {
+            "label": "AFRIQ Concours Pack",
+            "amount": 7000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 3,
+    "schools": [
+      {
+        "n": "Faculty of Letters & Social Sciences",
+        "acr": "FLSH",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "English",
+          "French",
+          "German",
+          "Spanish",
+          "Bilingual Letters",
+          "Psychology",
+          "Sociology",
+          "Anthropology",
+          "Geography",
+          "History",
+          "Philosophy",
+          "Communication",
+          "African Literature"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "text"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "maritalStatus",
+            "label": "Marital Status",
+            "type": "select",
+            "options": [
+              "Single",
+              "Married",
+              "Other"
+            ]
+          },
+          {
+            "key": "prevMatricule",
+            "label": "Previous UDla Matricule (if any)",
+            "type": "text"
+          },
+          {
+            "key": "bachSeries",
+            "label": "Bac/GCE A-Level Series",
+            "type": "text"
+          },
+          {
+            "key": "bachSession",
+            "label": "Bac/GCE A-Level Session (Year)",
+            "type": "number"
+          },
+          {
+            "key": "bachGrade",
+            "label": "Bac/GCE A-Level Grade",
+            "type": "text"
+          },
+          {
+            "key": "centerName",
+            "label": "Examination Center Name",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee (SYSTHAG)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Exam (University Med-Social Centre)",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp (for form)",
+            "amount": 1500
+          },
+          {
+            "label": "Postage Stamp (for envelope)",
+            "amount": 500
+          },
+          {
+            "label": "4 Passport Photos (4x4cm)",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & File Certification",
+            "amount": 6500
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Science",
+        "acr": "FS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochemistry",
+          "Animal Biology",
+          "Plant Biology",
+          "Chemistry",
+          "Computer Science",
+          "Mathematics",
+          "Physics",
+          "Earth Sciences",
+          "Microbiology",
+          "Pharmacology"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "bachSeries",
+            "label": "Bac/GCE A-Level Series",
+            "type": "text"
+          },
+          {
+            "key": "bachGrade",
+            "label": "Bac/GCE A-Level Grade",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "Postage Stamp",
+            "amount": 500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 8000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Laws & Political Science",
+        "acr": "FSJP",
+        "t": "Faculty",
+        "i": "law",
+        "departments": [
+          "Private Law (English/French)",
+          "Public Law",
+          "Political Science",
+          "English Law"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 8500
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Economics & Applied Management",
+        "acr": "FSEGA",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Economics",
+          "Management",
+          "Marketing",
+          "Accounting",
+          "Finance",
+          "Quantitative Techniques"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Pre-Registration Fee",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Exam",
+            "amount": 5000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 8500
+          }
+        ]
+      },
+      {
+        "n": "National Polytechnic School of Douala",
+        "acr": "ENSPD",
+        "t": "School",
+        "i": "poly",
+        "departments": [
+          "Civil Eng",
+          "Mechanical Eng",
+          "Energy",
+          "Electrical/Electronics",
+          "Computer Eng",
+          "Industrial Chemistry",
+          "Quality/Health/Safety (QHSE)",
+          "Maritime/Naval Engineering",
+          "Automobile"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "age",
+            "label": "Age (Max 29)",
+            "type": "number"
+          },
+          {
+            "key": "examCenter",
+            "label": "Exam Center (Douala, Yde, Baf, Bda)",
+            "type": "text"
+          },
+          {
+            "key": "optPaper",
+            "label": "Optional Paper (e.g. Math/Physics)",
+            "type": "text"
+          },
+          {
+            "key": "bachSeries",
+            "label": "Bac/GCE Series (C, D, E, F)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (UBA/BICEC)",
+            "amount": 20000
+          },
+          {
+            "label": "Fiscal Stamp (on form)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (Public Service Doctor)",
+            "amount": 3000
+          },
+          {
+            "label": "Lg A4 Envelope + Postage Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "AFRIQ Concours Prep Pack",
+            "amount": 4000
+          }
+        ]
+      },
+      {
+        "n": "Higher Schools of Economic and Commercial Sciences",
+        "acr": "ESSEC",
+        "t": "School",
+        "i": "com",
+        "departments": [
+          "Commercial Support",
+          "International Trade",
+          "Accounting/Finance",
+          "Marketing",
+          "Human Resources"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "examCenter",
+            "label": "Exam Center Choice",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (Standard)",
+            "amount": 20000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 3000
+          },
+          {
+            "label": "AFRIQ Concours Prep Pack",
+            "amount": 10500
+          }
+        ]
+      },
+      {
+        "n": "Higher Technical Teacher Training College of Douala",
+        "acr": "ENSET",
+        "t": "School",
+        "i": "teach",
+        "departments": [
+          "Civil Eng",
+          "Electrical",
+          "Mechanical",
+          "Admin Techniques",
+          "Economics",
+          "Guidance Counselling",
+          "Info Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "cycle",
+            "label": "Cycle (DIPET I/II)",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee",
+            "amount": 20000
+          },
+          {
+            "label": "Medical & Stamps",
+            "amount": 5000
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "University Institute of Technology of Douala",
+        "acr": "IUT",
+        "t": "Institute",
+        "i": "tech",
+        "departments": [
+          "Maintenance (GIM)",
+          "Thermal Energy (GTE)",
+          "Electrical (GEII)",
+          "Mechanical (GMP)",
+          "Civil (GC)",
+          "Admin Management (GEA)",
+          "Logistics (GLT)",
+          "Commercial Tech (TC)"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "age",
+            "label": "Age (Max 29)",
+            "type": "number"
+          },
+          {
+            "key": "examCenter",
+            "label": "Exam Center Choice",
+            "type": "text"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee (UBA/BICEC)",
+            "amount": 20000
+          },
+          {
+            "label": "Fiscal Stamp",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 3000
+          },
+          {
+            "label": "AFRIQ Special IUT Package",
+            "amount": 5500
+          }
+        ]
+      },
+      {
+        "n": "Institute of Fine Arts Nkongsamba",
+        "acr": "IBA",
+        "t": "Institute",
+        "i": "arts",
+        "departments": [
+          "Architecture",
+          "Urban Planning",
+          "Cinema/Audiovisual",
+          "Museology",
+          "Plastic Arts",
+          "Decor"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee",
+            "amount": 20000
+          },
+          {
+            "label": "Medical & Stamps",
+            "amount": 4500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5500
+          }
+        ]
+      },
+      {
+        "n": "Institute of Fisheries Science",
+        "acr": "ISH",
+        "t": "Institute",
+        "i": "agr",
+        "departments": [
+          "Aquaculture",
+          "Processing",
+          "Oceanography",
+          "Ecosystem Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Name",
+            "type": "text"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Concours Fee",
+            "amount": 20000
+          },
+          {
+            "label": "Medical & Stamps",
+            "amount": 4500
+          },
+          {
+            "label": "AFRIQ Processing & Filing",
+            "amount": 5500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 5,
+    "schools": [
+      {
+        "n": "Faculty of Arts, Letters and Human Sciences",
+        "t": "Faculty",
+        "i": "arts"
+      },
+      {
+        "n": "Faculty of Sciences",
+        "t": "Faculty",
+        "i": "sci"
+      },
+      {
+        "n": "Faculty of Economics and Management",
+        "t": "Faculty",
+        "i": "eco"
+      },
+      {
+        "n": "Faculty of Legal and Political Sciences",
+        "t": "Faculty",
+        "i": "law"
+      },
+      {
+        "n": "Faculty of Education",
+        "t": "Faculty",
+        "i": "edu"
+      },
+      {
+        "n": "University Institute of Technology of Ngaoundere",
+        "t": "Institute",
+        "i": "tech"
+      },
+      {
+        "n": "National School of Agro-Industrial Sciences",
+        "t": "Grande École",
+        "i": "agr"
+      },
+      {
+        "n": "School of Science and Veterinary Medicine",
+        "t": "School",
+        "i": "med"
+      },
+      {
+        "n": "School of Geology and Mining of Meiganga",
+        "t": "School",
+        "i": "min"
+      },
+      {
+        "n": "Chemistry Engineering and Minerals Industries School",
+        "t": "School",
+        "i": "chem"
+      }
+    ]
+  },
+  {
+    "university_id": 6,
+    "schools": [
+      {
+        "n": "Faculty of Arts and Humanities",
+        "t": "Faculty",
+        "i": "arts"
+      },
+      {
+        "n": "Faculty of Sciences",
+        "t": "Faculty",
+        "i": "sci"
+      },
+      {
+        "n": "Faculty of Economics and Management",
+        "t": "Faculty",
+        "i": "eco"
+      },
+      {
+        "n": "Faculty of Legal and Political Sciences",
+        "t": "Faculty",
+        "i": "law"
+      },
+      {
+        "n": "Faculty of Mines and Petroleum Industries",
+        "t": "Faculty",
+        "i": "min"
+      },
+      {
+        "n": "Advanced Teacher Training College of Maroua",
+        "t": "Grande École",
+        "i": "teach"
+      },
+      {
+        "n": "National Advanced School of Engineering of Maroua",
+        "t": "Grande École",
+        "i": "poly"
+      }
+    ]
+  },
+  {
+    "university_id": 10,
+    "schools": [
+      {
+        "n": "Faculty of Medicine and Biomedical Sciences",
+        "t": "Faculty",
+        "i": "med"
+      },
+      {
+        "n": "Faculty of Arts, Letters and Human Sciences",
+        "t": "Faculty",
+        "i": "arts"
+      },
+      {
+        "n": "Faculty of Sciences",
+        "t": "Faculty",
+        "i": "sci"
+      },
+      {
+        "n": "Faculty of Economics and Management",
+        "t": "Faculty",
+        "i": "eco"
+      },
+      {
+        "n": "Faculty of Legal and Political Sciences",
+        "t": "Faculty",
+        "i": "law"
+      },
+      {
+        "n": "Faculty of Education Sciences",
+        "t": "Faculty",
+        "i": "edu"
+      },
+      {
+        "n": "Higher Schools of Economic and Commercial Sciences",
+        "t": "School",
+        "i": "com"
+      },
+      {
+        "n": "Institute of Fine Arts and Innovation",
+        "t": "Institute",
+        "i": "arts"
+      }
+    ]
+  },
+  {
+    "university_id": 2,
+    "schools": [
+      {
+        "n": "Faculty of Arts, Letters and Human Sciences",
+        "t": "Faculty",
+        "i": "arts"
+      },
+      {
+        "n": "Faculty of Sciences",
+        "t": "Faculty",
+        "i": "sci"
+      },
+      {
+        "n": "Faculty of Medicine and Biomedical Sciences",
+        "t": "Faculty",
+        "i": "med"
+      },
+      {
+        "n": "Faculty of Education",
+        "t": "Faculty",
+        "i": "edu"
+      },
+      {
+        "n": "Advanced Teacher Training College of Yaounde",
+        "t": "Grande École",
+        "i": "teach"
+      },
+      {
+        "n": "Higher National Polytechnic School of Yaounde",
+        "t": "Grande École",
+        "i": "poly"
+      },
+      {
+        "n": "University Institute of Wood Technology of Mbalmayo",
+        "t": "Institute",
+        "i": "env"
+      }
+    ]
+  },
+  {
+    "university_id": 7,
+    "schools": [
+      {
+        "n": "Faculty of Legal and Political Sciences",
+        "t": "Faculty",
+        "i": "law"
+      },
+      {
+        "n": "Faculty of Economics and Management",
+        "t": "Faculty",
+        "i": "eco"
+      },
+      {
+        "n": "Institute of International Relations of Cameroon",
+        "t": "Institute",
+        "i": "lang"
+      },
+      {
+        "n": "Institute for Demographic Training and Research",
+        "t": "Institute",
+        "i": "research"
+      },
+      {
+        "n": "Higher School of Information and Communication Sciences and Techniques",
+        "t": "Grande École",
+        "i": "info"
+      }
+    ]
+  },
+  {
+    "university_id": 8,
+    "schools": [
+      {
+        "n": "Faculty of Arts, Letters and Human Sciences",
+        "t": "Faculty",
+        "i": "arts"
+      },
+      {
+        "n": "Faculty of Sciences",
+        "t": "Faculty",
+        "i": "sci"
+      },
+      {
+        "n": "Faculty of Economics and Management",
+        "t": "Faculty",
+        "i": "eco"
+      },
+      {
+        "n": "Faculty of Legal and Political Sciences",
+        "t": "Faculty",
+        "i": "law"
+      },
+      {
+        "n": "Institute of Agriculture, Wood, Water and Environment",
+        "t": "Institute",
+        "i": "env"
+      },
+      {
+        "n": "Higher Normal School of Technical Education",
+        "t": "School",
+        "i": "teach"
+      },
+      {
+        "n": "Higher School of Transformations of Mines and Energy Resources",
+        "t": "School",
+        "i": "min"
+      },
+      {
+        "n": "Advanced Teacher Training College of Bertoua",
+        "t": "School",
+        "i": "teach"
+      }
+    ]
+  },
+  {
+    "university_id": 9,
+    "schools": [
+      {
+        "n": "Faculty of Arts, Letters and Human Sciences",
+        "t": "Faculty",
+        "i": "arts"
+      },
+      {
+        "n": "Faculty of Sciences",
+        "t": "Faculty",
+        "i": "sci"
+      },
+      {
+        "n": "Faculty of Economics and Management",
+        "t": "Faculty",
+        "i": "eco"
+      },
+      {
+        "n": "Faculty of Legal and Political Sciences",
+        "t": "Faculty",
+        "i": "law"
+      },
+      {
+        "n": "Faculty of Medicine and Pharmaceutical Sciences",
+        "t": "Faculty",
+        "i": "med"
+      },
+      {
+        "n": "Higher School of Transport, Logistics and Commerce",
+        "t": "School",
+        "i": "log"
+      },
+      {
+        "n": "Institute of Agriculture, Wood, Water and Environment",
+        "t": "Institute",
+        "i": "env"
+      },
+      {
+        "n": "Advanced Technical Teacher Training College of Ebolowa",
+        "t": "School",
+        "i": "teach"
+      }
+    ]
+  }
+]

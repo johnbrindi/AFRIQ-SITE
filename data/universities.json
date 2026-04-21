@@ -1,0 +1,288 @@
+[
+  {
+    "id": 0,
+    "name": "University of Bamenda",
+    "short": "UBda",
+    "loc": "Bambili, Bamenda",
+    "city": "Bamenda",
+    "reg": "North West Region",
+    "tag": "Multi-disciplinary",
+    "est": "2010",
+    "img": "/images/universities/bamenda_campus.jpg",
+    "logo": "/images/universities/bamenda_logo.jpg",
+    "about": "The University of Bamenda (UBa) was created by Presidential Decree N°2010/372 of 14 December 2010. Its vision is to be a leading institution of higher learning addressing present and future development challenges through efficient teaching, research, and innovation.",
+    "missions": [
+      "Provide quality needs-based teaching and research",
+      "Instill lifelong integrity and practical intellectual confidence",
+      "Respond to national and international development challenges",
+      "Cultivate Anglo-Saxon values without sacrificing cultural diversity"
+    ],
+    "facts": {
+      "Established": "2010",
+      "Type": "State University",
+      "Campuses": "1 (Bambili)",
+      "Schools": "13",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 1,
+    "name": "University of Buea",
+    "short": "UBa",
+    "loc": "Buea, Mount Cameroon Foothills",
+    "city": "Buea",
+    "reg": "South West Region",
+    "tag": "Engineering & Medicine",
+    "est": "1993",
+    "img": "/images/universities/buea_campus.jpg",
+    "logo": "/images/universities/buea_logo.jpg",
+    "about": "Admission conditions are generally the same across the University of Buea except for certain faculties and professional schools that require competitive entrance examinations.",
+    "missions": [
+      "Provide world-class Anglophone higher education",
+      "Develop research in science, medicine and technology",
+      "Foster community engagement and sustainable development",
+      "Build bridges between Anglophone and Francophone academic traditions"
+    ],
+    "facts": {
+      "Established": "1993",
+      "Type": "State University",
+      "Campuses": "1 + satellites",
+      "Schools": "10",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 4,
+    "name": "University of Dschang",
+    "short": "UDs",
+    "loc": "Dschang, West Region",
+    "city": "Dschang",
+    "reg": "West Region",
+    "tag": "Agriculture & Sciences",
+    "est": "1993",
+    "img": "/images/universities/dschang_campus.jpg",
+    "logo": "/images/universities/dschang_logo.png",
+    "about": "The University of Dschang was created by Decree N°93/026 of January 19, 1993 following the university reform in Cameroon. It evolved from the former University Center of Dschang.",
+    "missions": [
+      "Lead agricultural and environmental research in Central Africa",
+      "Train professionals in agronomy, forestry and natural resources",
+      "Develop legal, economic and humanities education",
+      "Promote decentralization through satellite campuses"
+    ],
+    "facts": {
+      "Established": "1993",
+      "Type": "State University",
+      "Campuses": "9 (6 regions)",
+      "Schools": "10",
+      "Language": "French / English"
+    }
+  },
+  {
+    "id": 3,
+    "name": "University of Douala",
+    "short": "UDla",
+    "loc": "Bassa / Ndogbong, Douala",
+    "city": "Douala",
+    "reg": "Littoral Region",
+    "tag": "Business & Law",
+    "est": "1992",
+    "img": "/images/universities/douala_campus.jpg",
+    "logo": "/images/universities/douala_logo.jpg",
+    "about": "The University of Douala was created on April 13, 1992 after the transformation of the University Center of Douala into a university. It operates across several campuses in Douala.",
+    "missions": [
+      "Train high-level professionals adapted to the economic environment",
+      "Develop research in partnership with industry and civil society",
+      "Promote entrepreneurship and business innovation",
+      "Foster bilingual education in Cameroon's economic hub"
+    ],
+    "facts": {
+      "Established": "1992",
+      "Type": "State University",
+      "Campuses": "5",
+      "Schools": "11",
+      "Language": "French / English"
+    }
+  },
+  {
+    "id": 5,
+    "name": "University of Ngaoundéré",
+    "short": "UN",
+    "loc": "Dang, 15km from Ngaoundéré",
+    "city": "Ngaoundéré",
+    "reg": "Adamawa Region",
+    "tag": "Agro-Industrial Sciences",
+    "est": "1993",
+    "img": "/images/universities/ngaoundere_campus.jpg",
+    "logo": "/images/universities/ngaoundere_logo.jpg",
+    "about": "The University of Ngaoundéré was created by Presidential Decree N°93/028 of January 19, 1993 following the transformation of the University Center of Ngaoundéré into a university.",
+    "missions": [
+      "Develop agro-industrial and food sciences research",
+      "Train engineers for northern Cameroon's development",
+      "Foster veterinary medicine and animal health research",
+      "Bridge academic knowledge with the needs of the Adamawa region"
+    ],
+    "facts": {
+      "Established": "1993",
+      "Type": "State University",
+      "Campuses": "1 (Dang)",
+      "Schools": "10",
+      "Language": "French"
+    }
+  },
+  {
+    "id": 6,
+    "name": "University of Maroua",
+    "short": "UMa",
+    "loc": "Maroua, Far North Region",
+    "city": "Maroua",
+    "reg": "Far North Region",
+    "tag": "Sciences & Mines",
+    "est": "2008",
+    "img": "/images/universities/maroua_campus.jpg",
+    "logo": "/images/universities/maroua_logo.jpg",
+    "about": "The University of Maroua was created by Decree N°2008/280 of August 9, 2008. The institution comprises five faculties and two major schools.",
+    "missions": [
+      "Expand higher education access to the Far North Region",
+      "Train specialists in mines, petroleum and natural resources",
+      "Develop sciences and humanities for sustainable development",
+      "Promote teacher training and vocational education"
+    ],
+    "facts": {
+      "Established": "2008",
+      "Type": "State University",
+      "Campuses": "1",
+      "Schools": "7",
+      "Language": "French"
+    }
+  },
+  {
+    "id": 10,
+    "name": "University of Garoua",
+    "short": "UGar",
+    "loc": "Garoua, North Region",
+    "city": "Garoua",
+    "reg": "North Region",
+    "tag": "Sciences & Medicine",
+    "est": "2022",
+    "img": "/images/universities/garoua_campus.jpg",
+    "logo": "/images/universities/garoua_logo.jpg",
+    "about": "The University of Garoua was created by Decree N°2022/003 of January 5, 2022 and includes several faculties and higher schools.",
+    "missions": [
+      "Extend higher education to the North Region",
+      "Develop medical and biomedical sciences education",
+      "Train professionals in economics, law and fine arts",
+      "Promote educational sciences and teacher training"
+    ],
+    "facts": {
+      "Established": "2022",
+      "Type": "State University",
+      "Campuses": "1",
+      "Schools": "8",
+      "Language": "French"
+    }
+  },
+  {
+    "id": 2,
+    "name": "University of Yaoundé I",
+    "short": "UYI",
+    "loc": "Ngoa Ekelle, Yaoundé",
+    "city": "Yaoundé",
+    "reg": "Centre Region",
+    "tag": "Sciences & Engineering",
+    "est": "1962",
+    "img": "/images/universities/yaounde1_campus.jpg",
+    "logo": "/images/universities/yaounde1_logo.png",
+    "about": "The University of Yaoundé I is located at Ngoa Ekelle in Yaoundé, the political capital of Cameroon, and hosts several faculties and major schools.",
+    "missions": [
+      "Provide quality teaching and research across all domains",
+      "Foster scientific innovation and technological development",
+      "Train the next generation of skilled professionals and researchers",
+      "Maintain strong international academic partnerships"
+    ],
+    "facts": {
+      "Established": "1962",
+      "Type": "State University",
+      "Campuses": "1 (Ngoa Ekelle)",
+      "Schools": "7",
+      "Language": "French / English"
+    }
+  },
+  {
+    "id": 7,
+    "name": "University of Yaoundé II",
+    "short": "UYII",
+    "loc": "Soa Campus, Yaoundé",
+    "city": "Soa, Yaoundé",
+    "reg": "Centre Region",
+    "tag": "Law & Social Sciences",
+    "est": "1993",
+    "img": "/images/universities/yaounde2_campus.jpg",
+    "logo": "/images/universities/yaounde2_logo.jpg",
+    "about": "The University of Yaoundé II was created on January 19, 1993 and operates across several campuses including Soa, Ngoa Ekelle, and Obili.",
+    "missions": [
+      "Train legal, economic and political science professionals",
+      "Develop expertise in international relations and diplomacy",
+      "Foster demographic research and public policy",
+      "Promote communication and information sciences"
+    ],
+    "facts": {
+      "Established": "1993",
+      "Type": "State University",
+      "Campuses": "5",
+      "Schools": "5",
+      "Language": "French / English"
+    }
+  },
+  {
+    "id": 8,
+    "name": "University of Bertoua",
+    "short": "UBer",
+    "loc": "Bertoua, East Region",
+    "city": "Bertoua",
+    "reg": "East Region",
+    "tag": "Emerging University",
+    "est": "2022",
+    "img": "/images/universities/bertoua_campus.jpg",
+    "logo": "/images/universities/bertoua_logo.jpg",
+    "about": "The University of Bertoua was created by Decree N°2022/003 of January 5, 2022 and includes four faculties and four major schools.",
+    "missions": [
+      "Provide higher education access to the East Region",
+      "Develop expertise in agriculture, wood and environmental sciences",
+      "Train professionals in mining, energy and urban planning",
+      "Promote teacher education and vocational training"
+    ],
+    "facts": {
+      "Established": "2022",
+      "Type": "State University",
+      "Campuses": "1",
+      "Schools": "8",
+      "Language": "French"
+    }
+  },
+  {
+    "id": 9,
+    "name": "University of Ebolowa",
+    "short": "UEbo",
+    "loc": "Ebolowa, South Region",
+    "city": "Ebolowa",
+    "reg": "South Region",
+    "tag": "Health & Sciences",
+    "est": "2022",
+    "img": "/images/universities/ebolowa_campus.jpg",
+    "logo": "/images/universities/ebolowa_logo.jpg",
+    "about": "The University of Ebolowa was created by Decree N°2022/003 of January 5, 2022 and includes several faculties and higher schools.",
+    "missions": [
+      "Develop medical and pharmaceutical education in southern Cameroon",
+      "Train professionals in agriculture and environmental management",
+      "Provide legal, economic and arts education for the South Region",
+      "Foster technical and transport education"
+    ],
+    "facts": {
+      "Established": "2022",
+      "Type": "State University",
+      "Campuses": "1",
+      "Schools": "8",
+      "Language": "French"
+    }
+  }
+]
