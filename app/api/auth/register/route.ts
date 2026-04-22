@@ -2,53 +2,48 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import bcrypt from 'bcryptjs';
 
+// Regex for basic email validation server-side
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(req: Request) {
   try {
-    const { email, password, firstName, lastName } = await req.json();
+    const body = await req.json();
+    const { email, password, firstName, lastName, phone, academicBackground } = body;
 
+    // --- Input validation ---
     if (!email || !password || !firstName || !lastName) {
-      return NextResponse.json(
-        { message: 'Missing required fields' },
-        { status: 400 }
-      );
+      return NextResponse.json({ message: 'Please fill in all required fields.' }, { status: 400 });
+    }
+    if (!EMAIL_REGEX.test(email)) {
+      return NextResponse.json({ message: 'Please enter a valid email address.' }, { status: 400 });
+    }
+    if (password.length < 8) {
+      return NextResponse.json({ message: 'Password must be at least 8 characters.' }, { status: 400 });
     }
 
-    // Check if user already exists
-    const existingUser = await prisma.user.findUnique({
-      where: { email },
-    });
-
+    // --- Duplicate check ---
+    const existingUser = await prisma.user.findUnique({ where: { email: email.toLowerCase() } });
     if (existingUser) {
-      return NextResponse.json(
-        { message: 'User already exists' },
-        { status: 400 }
-      );
+      return NextResponse.json({ message: 'An account with this email already exists.' }, { status: 409 });
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // --- Secure password hash (cost factor 12) ---
+    const hashedPassword = await bcrypt.hash(password, 12);
 
-    // Create user
-    const newUser = await prisma.user.create({
+    await prisma.user.create({
       data: {
-        email,
+        email: email.toLowerCase().trim(),
         password: hashedPassword,
-        firstName,
-        lastName,
-        phone: '', // Default or optional
-        academicBackground: '', // Default or optional
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        phone: (phone || '').trim(),
+        academicBackground: (academicBackground || '').trim(),
       },
     });
 
-    return NextResponse.json(
-      { message: 'User created successfully', user: { id: newUser.id, email: newUser.email } },
-      { status: 201 }
-    );
+    return NextResponse.json({ message: 'Account created successfully.' }, { status: 201 });
   } catch (error) {
-    console.error('Registration Error:', error);
-    return NextResponse.json(
-      { message: 'An error occurred during registration' },
-      { status: 500 }
-    );
+    console.error('[REGISTER]', error);
+    return NextResponse.json({ message: 'An internal error occurred. Please try again.' }, { status: 500 });
   }
 }

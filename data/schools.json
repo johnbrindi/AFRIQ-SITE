@@ -1367,15 +1367,22 @@
         "t": "Faculty",
         "i": "tech",
         "departments": [
-          "Comp. Eng",
-          "Elec/Electronics",
-          "Civil Eng"
+          "Computer Engineering",
+          "Electrical & Electronics Engineering",
+          "Civil Engineering"
         ],
         "formFields": [
           {
-            "key": "fullName",
-            "label": "Full Name",
-            "type": "text"
+            "key": "surname",
+            "label": "Surname",
+            "type": "text",
+            "placeholder": "e.g. KAMDEM"
+          },
+          {
+            "key": "firstName",
+            "label": "First Name(s)",
+            "type": "text",
+            "placeholder": "e.g. Jean Baptiste"
           },
           {
             "key": "dob",
@@ -1383,31 +1390,173 @@
             "type": "date"
           },
           {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "gender",
+            "label": "Gender",
+            "type": "select",
+            "options": ["Male", "Female"]
+          },
+          {
+            "key": "maritalStatus",
+            "label": "Marital Status",
+            "type": "select",
+            "options": ["Single", "Married", "Divorced", "Widowed"]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "idCardNumber",
+            "label": "National ID Card Number",
+            "type": "text",
+            "placeholder": "e.g. 123456789"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Molyko, Buea"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": ["North West", "South West", "Centre", "Littoral", "West", "Adamawa", "North", "Far North", "East", "South"]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "subdivisionOrigin",
+            "label": "Sub-Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Bamenda I"
+          },
+          {
+            "key": "olCandidateNo",
+            "label": "GCE O/L Candidate Number",
+            "type": "text",
+            "placeholder": "e.g. NW012345"
+          },
+          {
+            "key": "olYear",
+            "label": "GCE O/L Year",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olCenter",
+            "label": "GCE O/L Examination Center",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "olPoints",
+            "label": "GCE O/L Total Points",
+            "type": "number",
+            "placeholder": "e.g. 30"
+          },
+          {
+            "key": "alCandidateNo",
+            "label": "GCE A/L Candidate Number",
+            "type": "text",
+            "placeholder": "e.g. NW06789"
+          },
+          {
+            "key": "alYear",
+            "label": "GCE A/L Year",
+            "type": "text",
+            "placeholder": "e.g. 2023"
+          },
+          {
+            "key": "alCenter",
+            "label": "GCE A/L Examination Center",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
             "key": "alPoints",
-            "label": "Total GCE A/L Points",
-            "type": "number"
+            "label": "GCE A/L Total Points",
+            "type": "number",
+            "placeholder": "e.g. 14"
+          },
+          {
+            "key": "alMathGrade",
+            "label": "Grade in Mathematics (A/L)",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "alPhysicsGrade",
+            "label": "Grade in Physics (A/L)",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
           },
           {
             "key": "choice1",
-            "label": "Engineering Specialty",
+            "label": "1st Choice Engineering Specialty",
+            "type": "deptSelect"
+          },
+          {
+            "key": "choice2",
+            "label": "2nd Choice Engineering Specialty",
             "type": "deptSelect"
           }
         ],
         "schoolRequirements": [
           {
-            "label": "Concours Fee (Bank Deposit)",
+            "label": "FET Concours Registration Fee (Bank Deposit)",
             "amount": 20000
           },
           {
-            "label": "Lab/Practical Fees",
-            "amount": 10000
+            "label": "Certified Birth Certificate (& photocopy)",
+            "amount": 2100
           },
           {
-            "label": "Medical Certificate",
+            "label": "Medical Certificate of Fitness",
             "amount": 5000
           },
           {
-            "label": "AFRIQ Processing & Filing",
+            "label": "GCE O/L & A/L Result Slips (& photocopies)",
+            "amount": 3000
+          },
+          {
+            "label": "GCE O/L & A/L Transcripts",
+            "amount": 3000
+          },
+          {
+            "label": "4 Passport-Size Photographs",
+            "amount": 1500
+          },
+          {
+            "label": "Large Stamped Envelope (return address)",
+            "amount": 1800
+          },
+          {
+            "label": "AFRIQ Application Processing & Filing",
             "amount": 5000
           }
         ]

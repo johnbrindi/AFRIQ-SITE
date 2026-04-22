@@ -108,11 +108,11 @@ function AuthForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#2a0b56] pt-[calc(var(--nav-h)+2rem)] pb-10 px-4">
-      <div className="w-full max-w-[480px] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+    <div className="min-h-screen bg-[#2a0b56] pt-[var(--nav-h)] flex flex-col items-center px-3 py-8 sm:py-12">
+      <div className="w-full max-w-[490px] bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Header Section */}
-        <div className="bg-[#4a2386] px-8 pt-6 pb-6 rounded-t-2xl">
-          <Link href="/" className="inline-flex items-center text-white font-black text-[18px] tracking-tight hover:opacity-80 transition-opacity mb-6">
+        <div className="bg-[#4a2386] px-6 sm:px-8 pt-5 pb-5">
+          <Link href="/" className="inline-flex items-center text-white font-black text-[17px] tracking-tight hover:opacity-80 transition-opacity mb-5">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7"></path></svg>
             AFRIQ
           </Link>
@@ -134,7 +134,7 @@ function AuthForm() {
         </div>
 
         {/* Body Section */}
-        <div className="px-8 pt-8 pb-8 flex-1 overflow-y-auto max-h-[80vh] custom-scrollbar">
+        <div className="px-5 sm:px-8 pt-7 pb-8">
           <h2 className="font-bold text-[20px] text-brand-slate mb-1">
             {tab === 'login' ? 'Welcome Back' : 'Start Your Application'}
           </h2>
@@ -162,7 +162,7 @@ function AuthForm() {
           <form method="POST" onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
             {tab === 'signup' && (
               <>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-1.5">First Name</label>
                     <input 
@@ -232,7 +232,7 @@ function AuthForm() {
 
                 <div>
                   <label className="block text-[10.5px] font-bold text-brand-slate uppercase tracking-wider mb-2">Academic Background</label>
-                  <div className="grid grid-cols-3 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                     <button type="button" onClick={() => setAcademicBg('Sciences')} className={`flex items-center justify-center gap-1.5 text-[11.5px] font-semibold py-2.5 px-1 border rounded-lg transition-all ${academicBg === 'Sciences' ? 'border-brand-purple text-brand-purple bg-brand-purple/5' : 'border-[#e2e8f0] text-brand-slate hover:border-brand-purple/50'}`}>
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                       Sciences

@@ -27,7 +27,7 @@ export default function Stepper({ steps, currentStep }: StepperProps) {
               )}
             </div>
             
-            <div className="absolute top-[40px] left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-semibold text-brand-muted">
+            <div className="absolute top-[40px] left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-semibold text-brand-muted hidden sm:block">
               {step.label}
             </div>
 
