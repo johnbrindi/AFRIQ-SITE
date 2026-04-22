@@ -1,13 +1,15 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { getToken } from 'next-auth/jwt';
 
 export async function middleware(request: NextRequest) {
-  const token = await getToken({
-    req: request,
-    secret: process.env.NEXTAUTH_SECRET,
-  });
-  const isAuth = !!token;
+  // Robustly check for NextAuth v4 and v5 session cookies, handling both local (HTTP) and production (HTTPS) prefixes.
+  // This bypasses `getToken` which fails if NEXTAUTH_URL is misconfigured to localhost in production.
+  const isAuth = 
+    request.cookies.has('next-auth.session-token') || 
+    request.cookies.has('__Secure-next-auth.session-token') ||
+    request.cookies.has('authjs.session-token') ||
+    request.cookies.has('__Secure-authjs.session-token');
+    
   const pathname = request.nextUrl.pathname;
 
   const isAuthPage = pathname === '/auth' || pathname.startsWith('/auth/');
