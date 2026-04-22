@@ -5,19 +5,21 @@ import LandingFooter from '@/components/portal/LandingFooter';
 import Link from 'next/link';
 import { prisma } from '@/lib/db';
 import UniversityCard from '@/components/portal/UniversityCard';
+import { Prisma } from '@prisma/client';
 
 export const revalidate = 3600;
 
+type UniversityWithSchools = Prisma.UniversityGetPayload<{ include: { schools: true } }>;
+
 export default async function Home() {
-  let universities = [];
+  let universities: UniversityWithSchools[] = [];
   try {
     universities = await prisma.university.findMany({
       include: { schools: true },
       take: 8,
     });
   } catch (error) {
-    console.error("Database connection failed:", error);
-    // Fallback to empty array or we could show a specific message
+    console.error('Database connection failed:', error);
   }
 
   const isDbDown = universities.length === 0;
