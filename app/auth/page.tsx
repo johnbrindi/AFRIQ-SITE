@@ -40,9 +40,8 @@ function AuthForm() {
         setSuccess('Successfully signed in! Redirecting...');
         // Small delay to show success message before redirecting
         setTimeout(() => {
-          router.push(callbackUrl);
-          router.refresh();
-        }, 1000);
+          window.location.href = callbackUrl;
+        }, 800);
       }
     } else {
       // Validation for signup
@@ -95,9 +94,8 @@ function AuthForm() {
             setLoading(false);
           } else {
             setTimeout(() => {
-              router.push(callbackUrl);
-              router.refresh();
-            }, 1000);
+              window.location.href = callbackUrl;
+            }, 800);
           }
         }
       } catch (err) {
