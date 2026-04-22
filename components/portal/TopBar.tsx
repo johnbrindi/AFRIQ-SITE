@@ -15,11 +15,7 @@ export default function TopBar() {
 
         {/* Logo — always visible */}
         <Link href="/" className="flex items-center gap-2 shrink-0 select-none">
-          <div className="w-9 h-9 rounded-xl bg-brand-purple flex items-center justify-center shrink-0">
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
-            </svg>
-          </div>
+          <img src="/afriq-images/afriq-logo.jpeg" alt="AFRIQ Logo" className="w-9 h-9 rounded-xl object-cover" />
           <span className="text-[18px] font-black text-brand-purple tracking-tight">AFRIQ</span>
         </Link>
 
