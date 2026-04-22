@@ -108,8 +108,8 @@ function AuthForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#2a0b56] pt-[var(--nav-h)] flex flex-col items-center px-3 py-8 sm:py-12">
-      <div className="w-full max-w-[490px] bg-white rounded-2xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen bg-[#2a0b56] pt-[var(--nav-h)] flex flex-col items-start sm:items-center px-3 py-8 sm:py-12">
+      <div className="w-full max-w-[490px] mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Header Section */}
         <div className="bg-[#4a2386] px-6 sm:px-8 pt-5 pb-5">
           <Link href="/" className="inline-flex items-center text-white font-black text-[17px] tracking-tight hover:opacity-80 transition-opacity mb-5">
@@ -333,13 +333,6 @@ function AuthForm() {
         </div>
       </div>
       
-      {/* Scrollbar hide style block for this specific component */}
-      <style dangerouslySetInnerHTML={{__html: `
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
-        .custom-scrollbar:hover::-webkit-scrollbar-thumb { background: #cbd5e1; }
-      `}} />
     </div>
   );
 }

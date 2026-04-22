@@ -145,8 +145,8 @@ export default function ApplyForm({ university, school, department }: {
     <>
       <Stepper steps={[{ id:'1', label:'University' },{ id:'2', label:'School' },{ id:'3', label:'Department' },{ id:'4', label:'Apply' }]} currentStep="4" />
 
-      <div className="max-w-brand-portal mx-auto py-8 px-4 md:px-[var(--px)] pb-20">
-        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 items-start">
+      <div className="max-w-brand-portal mx-auto py-6 sm:py-8 px-3 sm:px-4 md:px-[var(--px)] pb-24 lg:pb-20">
+        <form id="apply-form" onSubmit={handleSubmit(onSubmit)} className="flex flex-col lg:grid lg:grid-cols-[1fr_300px] gap-6 lg:gap-8 items-start">
           
           {/* LEFT — form sections */}
           <div className="flex flex-col gap-7">
@@ -194,7 +194,7 @@ export default function ApplyForm({ university, school, department }: {
                   <svg className="w-4 h-4 shrink-0 mt-0.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                   All documents listed below are <strong>required</strong> for your application. The total fee is automatically calculated.
                 </div>
-                <div className="overflow-x-auto rounded-lg border border-brand-border">
+                <div className="overflow-x-auto rounded-lg border border-brand-border -mx-1 sm:mx-0">
                   <table className="w-full border-collapse text-sm">
                     <thead>
                       <tr className="bg-brand-purple text-white">
@@ -263,43 +263,68 @@ export default function ApplyForm({ university, school, department }: {
             </div>
           </div>
 
-          {/* RIGHT — sticky summary + submit */}
-          <div className="sticky top-[84px]">
-            <div className="bg-white border-[1.5px] border-brand-border rounded-xl overflow-hidden mb-4">
-              <div className="bg-brand-purple px-4 py-3 text-white text-[12.5px] font-bold flex items-center gap-2">
+          {/* RIGHT — sidebar: stacks below form on mobile, sticky on desktop */}
+          <div className="w-full lg:sticky lg:top-[84px]">
+            <div className="bg-white border border-brand-border rounded-xl overflow-hidden mb-4">
+              {/* Solid header — no gradient */}
+              <div className="bg-brand-purple px-6 py-4 text-white text-[13px] font-bold flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 Application Summary
               </div>
-              <div className="p-4 space-y-2">
+              {/* Body — 24px padding */}
+              <div className="p-6 space-y-3">
                 {[['University', university.name], ['School', school.n], ['Department', department]].map(([k, v]) => (
-                  <div key={k} className="flex justify-between py-1.5 border-b border-brand-border last:border-0 text-[12px]">
+                  <div key={k} className="flex justify-between py-2 border-b border-brand-border last:border-0 text-[12px]">
                     <span className="text-brand-muted">{k}</span>
                     <span className="font-bold text-brand-slate text-right max-w-[160px] text-[11.5px] leading-tight">{v}</span>
                   </div>
                 ))}
-                <div className="mt-3 pt-3 border-t-2 border-brand-purple/20 flex justify-between">
+                <div className="pt-3 border-t-2 border-brand-border flex justify-between items-center">
                   <span className="text-[12px] font-bold text-brand-slate">Total Fee</span>
-                  <span className="text-[13px] font-extrabold text-brand-purple">{totalFee.toLocaleString()} XAF</span>
+                  <span className="text-[14px] font-extrabold text-brand-purple">{totalFee.toLocaleString()} XAF</span>
                 </div>
               </div>
             </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full text-[14px] font-bold text-white bg-brand-purple py-3.5 rounded-xl hover:bg-brand-purple2 hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(74,35,134,0.3)] transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {loading ? (
-                <><svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>Generating PDF...</>
-              ) : (
-                <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Submit & Download PDF</>
-              )}
-            </button>
-            <p className="text-[11px] text-brand-muted text-center mt-3 leading-relaxed">
-              Your application is saved securely. A PDF will be downloaded for you to print and submit.
-            </p>
+            {/* Submit button — hidden on mobile (replaced by sticky bar below) */}
+            <div className="hidden lg:block">
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full text-[14px] font-bold text-white bg-brand-purple py-4 rounded-xl hover:bg-brand-purple2 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {loading ? (
+                  <><svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>Generating PDF...</>
+                ) : (
+                  <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Submit & Download PDF</>
+                )}
+              </button>
+              <p className="text-[11px] text-brand-muted text-center mt-3 leading-relaxed">
+                Your application is saved securely. A PDF will be downloaded for you to print and submit.
+              </p>
+            </div>
           </div>
         </form>
+      </div>
+
+      {/* Mobile sticky submit bar — fixed at bottom on mobile only */}
+      <div className="fixed bottom-0 left-0 right-0 z-[800] lg:hidden bg-white border-t border-brand-border px-4 py-3 flex items-center gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+        <div className="flex-1 min-w-0">
+          <div className="text-[10.5px] text-brand-muted">Total</div>
+          <div className="text-[15px] font-extrabold text-brand-purple leading-tight">{totalFee.toLocaleString()} XAF</div>
+        </div>
+        <button
+          type="submit"
+          form="apply-form"
+          disabled={loading}
+          className="shrink-0 text-[13px] font-bold text-white bg-brand-purple px-6 py-3 rounded-xl flex items-center gap-2 disabled:opacity-60"
+        >
+          {loading ? (
+            <><svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>Generating...</>
+          ) : (
+            <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Submit & PDF</>
+          )}
+        </button>
       </div>
 
       <SuccessModal

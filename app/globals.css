@@ -24,16 +24,34 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  
+  html { 
+    scroll-behavior: smooth;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
   body {
     background: var(--bg);
     color: var(--slate);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    /* Ensure body takes full width on mobile */
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Ensure images don't overflow */
+  img, video {
+    max-width: 100%;
+    height: auto;
   }
 }
 
 @layer components {
-  /* You can add complex component styles here if needed, 
-     but most should be moved to Tailwind classes in components */
+  /* Smooth scrollbar for webkit browsers */
+  .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb { background: #cbd5e1; }
 }

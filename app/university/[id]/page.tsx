@@ -31,7 +31,7 @@ export default async function UniversityDetailPage({ params }: { params: { id: s
         <div className="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-11 items-start">
           
           <div className="order-2 md:order-1">
-            <div className="bg-white border-[1.5px] border-brand-border rounded-2xl p-7 mb-5.5">
+            <div className="bg-white border border-brand-border rounded-2xl p-6 mb-5">
               <h2 className="text-[15px] font-extrabold text-brand-slate mb-3 flex items-center gap-2">
                 <svg className="w-5 h-5 text-brand-purple" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                 About the University
@@ -59,13 +59,13 @@ export default async function UniversityDetailPage({ params }: { params: { id: s
             <SchoolList universityId={university.id} schools={university.schools as any[]} />
           </div>
 
-          <div className="order-1 md:order-2 sticky top-[84px]">
-            <div className="bg-white border-[1.5px] border-brand-border rounded-xl overflow-hidden mb-3.5">
-              <div className="bg-brand-purple px-4 py-3 text-white text-[12.5px] font-bold flex items-center gap-2">
+          <div className="order-1 md:order-2 md:sticky md:top-[84px]">
+            <div className="bg-white border border-brand-border rounded-xl overflow-hidden mb-4">
+              <div className="bg-brand-purple px-6 py-4 text-white text-[13px] font-bold flex items-center gap-2">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 Quick Facts
               </div>
-              <div className="p-4">
+              <div className="p-6">
                 <div className="text-[13px] font-bold text-brand-purple mb-1">{university.city}</div>
                 <div className="text-[12px] text-brand-muted mb-4 pb-4 border-b border-brand-border">{university.reg} Region</div>
                 

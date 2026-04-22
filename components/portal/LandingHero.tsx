@@ -22,28 +22,28 @@ export default function LandingHero() {
             2025 Applications Open
           </div>
           
-          <h1 className="font-serif text-[clamp(42px,6vw,84px)] font-black text-white leading-[1] tracking-tight mb-8">
+          <h1 className="font-serif text-[clamp(34px,6vw,84px)] font-black text-white leading-[1.05] tracking-tight mb-6 sm:mb-8">
             Your University <br />
             <span className="text-brand-gold2 italic">Journey Starts</span> <br />
             Here.
           </h1>
           
-          <p className="text-[16px] text-white/70 leading-relaxed max-w-[500px] mb-10">
+          <p className="text-[15px] sm:text-[16px] text-white/70 leading-relaxed max-w-[500px] mb-8 sm:mb-10">
             AFRIQ connects Cameroonian students to all 11 state universities — browse every faculty, compare programmes, and apply in minutes.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-16">
-            <Link href="/auth" className="text-[14px] font-bold text-brand-purple bg-white border-none px-8 py-3.5 rounded-lg hover:shadow-card-lg hover:-translate-y-0.5 transition-all inline-flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 mb-12 sm:mb-16">
+            <Link href="/auth" className="text-[14px] font-bold text-brand-purple bg-white border-none px-8 py-3.5 rounded-lg hover:shadow-card-lg hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2">
               Get Started Free
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </Link>
-            <Link href="#explore" className="text-[14px] font-bold text-white bg-white/5 border-[1.5px] border-white/20 px-8 py-3.5 rounded-lg hover:bg-white/10 transition-all inline-flex items-center gap-2">
+            <Link href="#explore" className="text-[14px] font-bold text-white bg-white/10 border-[1.5px] border-white/30 px-8 py-3.5 rounded-lg hover:bg-white/15 transition-all inline-flex items-center justify-center gap-2">
               Explore Universities
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="7 13 12 18 17 13" /><polyline points="7 6 12 11 17 6" /></svg>
             </Link>
           </div>
 
-          <div className="flex gap-12 pt-8 border-t border-white/10">
+          <div className="flex gap-6 sm:gap-12 pt-8 border-t border-white/10">
             <div>
               <div className="font-serif text-[32px] font-black text-white mb-0.5">11</div>
               <div className="text-[10px] font-bold text-white/40 tracking-[1.5px] uppercase">Universities</div>
