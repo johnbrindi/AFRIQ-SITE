@@ -40,7 +40,7 @@ export default function TopBar() {
               <div className="w-8 h-8 rounded-full bg-brand-pale border border-brand-border flex items-center justify-center text-brand-purple font-bold text-xs uppercase" title={session.user?.name || ''}>
                 {session.user?.name?.[0] || session.user?.email?.[0] || 'U'}
               </div>
-              <button onClick={() => signOut({ callbackUrl: '/' })} className="text-[11px] font-bold text-brand-muted hover:text-red-500 uppercase tracking-wider">
+              <button onClick={() => signOut({ callbackUrl: window.location.origin })} className="text-[11px] font-bold text-brand-muted hover:text-red-500 uppercase tracking-wider">
                 Sign out
               </button>
             </>
@@ -82,7 +82,7 @@ export default function TopBar() {
                 Dashboard
               </Link>
               <button
-                onClick={() => { signOut({ callbackUrl: '/' }); setMenuOpen(false); }}
+                onClick={() => { signOut({ callbackUrl: window.location.origin }); setMenuOpen(false); }}
                 className="text-[13px] font-bold text-red-500 border border-red-200 px-4 py-3 rounded-xl"
               >
                 Sign Out
