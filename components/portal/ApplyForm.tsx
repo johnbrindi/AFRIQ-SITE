@@ -7,8 +7,6 @@ import { School, University } from '@/types';
 import Stepper from '../ui/Stepper';
 import SuccessModal from './SuccessModal';
 
-const REGISTRATION_FEE = 25000;
-
 export default function ApplyForm({ university, school, department }: {
   university: University; school: School; department: string;
 }) {
@@ -22,8 +20,27 @@ export default function ApplyForm({ university, school, department }: {
   const requirements = Array.isArray(school.schoolRequirements)
     ? school.schoolRequirements : JSON.parse(school.schoolRequirements as any || '[]');
 
-  // All fees are pre-included — total is fixed
-  const totalFee = REGISTRATION_FEE + requirements.reduce((sum: number, r: any) => sum + (r.amount || 0), 0);
+  // Determine if this is the Nursing concour
+  const isNursing = (school.n || '').toLowerCase().includes('nursing') || 
+                    (department || '').toLowerCase().includes('nursing') || 
+                    (school.acr || '').toLowerCase() === 'srn';
+
+  // Calculate base sum
+  const requirementsSum = requirements.reduce((sum: number, r: any) => sum + (r.amount || 0), 0);
+  
+  // Calculate fees
+  let totalFee = requirementsSum + 1500;
+  let processingFee = 1500;
+  
+  if (isNursing) {
+    totalFee = 52000;
+    processingFee = 52000 - requirementsSum;
+    // Fallback if DB sum is already > 52000 (just in case)
+    if (processingFee < 0) {
+      totalFee = requirementsSum;
+      processingFee = 0;
+    }
+  }
 
   const generatePDF = async (formData: any) => {
     const { default: jsPDF } = await import('jspdf');
@@ -76,7 +93,7 @@ export default function ApplyForm({ university, school, department }: {
     doc.setTextColor(0, 0, 0);
 
     const feeRows: [string, string][] = [
-      ['Application / Registration Fee', `${REGISTRATION_FEE.toLocaleString()} XAF`],
+      ['Platform Processing & Service Fee', `${processingFee.toLocaleString()} XAF`],
       ...requirements.map((r: any) => [r.label, `${(r.amount || 0).toLocaleString()} XAF`]),
     ];
 
@@ -204,12 +221,12 @@ export default function ApplyForm({ university, school, department }: {
                       </tr>
                     </thead>
                     <tbody>
-                      {/* Fixed registration fee row */}
+                      {/* Processing fee row */}
                       <tr className="bg-brand-pale/50">
                         <td className="p-3 text-center"><span className="text-brand-purple font-bold text-base">✓</span></td>
-                        <td className="p-3 text-[13px] font-semibold text-brand-slate">Application / Registration Fee</td>
+                        <td className="p-3 text-[13px] font-semibold text-brand-slate">Platform Processing &amp; Service Fee</td>
                         <td className="p-3 text-right">
-                          <span className="bg-brand-pale text-brand-purple rounded px-2 py-1 text-[12px] font-bold tabular-nums">{REGISTRATION_FEE.toLocaleString()}</span>
+                          <span className="bg-brand-pale text-brand-purple rounded px-2 py-1 text-[12px] font-bold tabular-nums">{processingFee.toLocaleString()}</span>
                         </td>
                       </tr>
                       {requirements.map((req: any, i: number) => (

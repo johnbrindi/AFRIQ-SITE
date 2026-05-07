@@ -19,7 +19,7 @@ export default function LandingHero() {
         <div>
           <div className="inline-flex items-center gap-2 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold2 text-[10.5px] font-bold tracking-[1.5px] uppercase px-4 py-1.5 rounded-full mb-8">
             <div className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-            2025 Applications Open
+            2026 Applications Open
           </div>
           
           <h1 className="font-serif text-[clamp(34px,6vw,84px)] font-black text-white leading-[1.05] tracking-tight mb-6 sm:mb-8">
@@ -97,7 +97,7 @@ export default function LandingHero() {
             </div>
             <div className="flex-1">
               <div className="text-[10px] font-bold text-white/30 uppercase tracking-[1.5px] mb-1">Key Deadline</div>
-              <h4 className="text-[15px] font-bold text-white">August 31, 2025</h4>
+              <h4 className="text-[15px] font-bold text-white">August 31, 2026</h4>
               <p className="text-[12px] text-white/50">Most state universities</p>
             </div>
             <div className="px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 text-[10px] font-bold border border-red-500/20">

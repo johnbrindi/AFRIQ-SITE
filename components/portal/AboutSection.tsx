@@ -58,9 +58,14 @@ export default function AboutSection() {
           <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-black text-white tracking-tight mb-6 leading-[1.1]">
             What is AFRIQ?
           </h2>
-          <p className="text-[15.5px] text-white/70 leading-relaxed mb-10 max-w-[500px]">
-            AFRIQ is Cameroon's centralized university application portal — designed to simplify the journey from secondary school to higher education. Built for students across all 10 regions, AFRIQ aggregates accurate admissions data from all 11 state universities into one modern, mobile-friendly platform.
-          </p>
+          <div className="text-[15.5px] text-white/70 leading-relaxed mb-10 max-w-[500px] space-y-4">
+            <p>
+              The Academic Foundation for Rising Intellectuals in Africa (AFRIQ) is more than an initiative—it’s a movement. Founded on the belief that Africa’s greatest resource is its people, AFRIQ is dedicated to empowering the next generation of leaders through education, mentorship, and community impact.
+            </p>
+            <p>
+              From classrooms to communities, AFRIQ creates platforms where students, tutors, and visionaries can shine. By spotlighting talent, nurturing discipline, and fostering innovation, we are building a culture where youth see themselves not just as learners, but as leaders shaping tomorrow.
+            </p>
+          </div>
 
           <div className="space-y-7">
             {features.map((f, i) => (
