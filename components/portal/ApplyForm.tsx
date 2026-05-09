@@ -21,27 +21,36 @@ export default function ApplyForm({ university, school, department }: {
     ? school.schoolRequirements : JSON.parse(school.schoolRequirements as any || '[]');
 
   // Determine if this is the Nursing concour
-  const isNursing = (school.n || '').toLowerCase().includes('nursing') || 
-                    (department || '').toLowerCase().includes('nursing') || 
-                    (school.acr || '').toLowerCase() === 'srn';
+  const isNursing =
+    (school.n || '').toLowerCase().includes('nursing') ||
+    (department || '').toLowerCase().includes('nursing') ||
+    (school.acr || '').toLowerCase() === 'srn';
 
-  // Calculate base sum
-  const requirementsSum = requirements.reduce((sum: number, r: any) => sum + (r.amount || 0), 0);
-  
   // Calculate fees
+  const requirementsSum = requirements.reduce((sum: number, r: any) => sum + (r.amount || 0), 0);
   let totalFee = requirementsSum + 1500;
   let processingFee = 1500;
-  
+
   if (isNursing) {
     totalFee = 52000;
     processingFee = 52000 - requirementsSum;
-    // Fallback if DB sum is already > 52000 (just in case)
-    if (processingFee < 0) {
-      totalFee = requirementsSum;
-      processingFee = 0;
-    }
+    if (processingFee < 0) { totalFee = requirementsSum; processingFee = 0; }
   }
 
+  // Separate the entryCertType field for special prominent rendering
+  const entryCertField = formFields.find((f: any) => f.key === 'entryCertType');
+  const otherFields = formFields.filter((f: any) => f.key !== 'entryCertType');
+
+  // Keys that should span full-width (both columns)
+  const FULL_WIDTH_KEYS = new Set([
+    'pob', 'nationality', 'regionOrigin', 'divisionOrigin', 'subDivOrigin',
+    'subdivisionOrigin', 'address', 'alSchool', 'olSchool',
+    'motherNameContact', 'fatherNameContact',
+  ]);
+  const isFullWidth = (field: any) =>
+    field.type === 'textarea' || FULL_WIDTH_KEYS.has(field.key);
+
+  // ── PDF Generation ────────────────────────────────────────────────────────
   const generatePDF = async (formData: any) => {
     const { default: jsPDF } = await import('jspdf');
     const { default: autoTable } = await import('jspdf-autotable');
@@ -49,7 +58,7 @@ export default function ApplyForm({ university, school, department }: {
     const purple: [number, number, number] = [74, 35, 134];
     const lightPurple: [number, number, number] = [243, 238, 249];
 
-    // Header
+    // Header banner
     doc.setFillColor(...purple);
     doc.rect(0, 0, 210, 32, 'F');
     doc.setTextColor(255, 255, 255);
@@ -81,7 +90,7 @@ export default function ApplyForm({ university, school, department }: {
       theme: 'grid',
       headStyles: { fillColor: lightPurple, textColor: purple, fontStyle: 'bold', fontSize: 9 },
       bodyStyles: { fontSize: 9 },
-      columnStyles: { 0: { cellWidth: 65, fontStyle: 'bold' }, 1: { cellWidth: 'auto' } },
+      columnStyles: { 0: { cellWidth: 70, fontStyle: 'bold' }, 1: { cellWidth: 'auto' } },
     });
     y = (doc as any).lastAutoTable.finalY + 10;
 
@@ -160,55 +169,140 @@ export default function ApplyForm({ university, school, department }: {
 
   return (
     <>
-      <Stepper steps={[{ id:'1', label:'University' },{ id:'2', label:'School' },{ id:'3', label:'Department' },{ id:'4', label:'Apply' }]} currentStep="4" />
+      <Stepper
+        steps={[
+          { id: '1', label: 'University' },
+          { id: '2', label: 'School' },
+          { id: '3', label: 'Department' },
+          { id: '4', label: 'Apply' },
+        ]}
+        currentStep="4"
+      />
 
       <div className="max-w-brand-portal mx-auto py-6 sm:py-8 px-3 sm:px-4 md:px-[var(--px)] pb-24 lg:pb-20">
-        <form id="apply-form" onSubmit={handleSubmit(onSubmit)} className="flex flex-col lg:grid lg:grid-cols-[1fr_300px] gap-6 lg:gap-8 items-start">
-          
-          {/* LEFT — form sections */}
+        <form
+          id="apply-form"
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col lg:grid lg:grid-cols-[1fr_300px] gap-6 lg:gap-8 items-start"
+        >
+
+          {/* ── LEFT: form sections ─────────────────────────────────────── */}
           <div className="flex flex-col gap-7">
 
-            {/* Section 1: Student Information */}
+            {/* ── SECTION 1: Student Information ──────────────────────────── */}
             <div className="bg-white rounded-xl border-[1.5px] border-brand-border overflow-hidden">
               <div className="bg-brand-pale border-b border-brand-border px-5 py-3.5 flex items-center gap-2.5">
                 <div className="w-6 h-6 bg-brand-purple text-white rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">1</div>
                 <h3 className="text-[13.5px] font-extrabold text-brand-slate">Student Information</h3>
               </div>
+
+              {/* ── Entry Certificate Type — Special prominent card ──────── */}
+              {entryCertField && (
+                <div className="px-4 sm:px-5 pt-5 pb-0">
+                  <div className="bg-gradient-to-r from-brand-pale to-purple-50 border border-brand-purple/20 rounded-xl p-4">
+                    <div className="flex items-start gap-3 mb-3.5">
+                      <div className="w-8 h-8 bg-brand-purple text-white rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-[12.5px] font-extrabold text-brand-slate tracking-wide">
+                          What entry certificate will you use?
+                        </p>
+                        <p className="text-[11.5px] text-brand-mid mt-0.5 leading-relaxed">
+                          Select <strong>GCE</strong> if you are a General student, or <strong>BACC</strong> if you are a Technical student. This determines which certificate points are used for admission.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {(entryCertField.options || ['GCE (General Students)', 'BACC (Technical Students)']).map((opt: string) => (
+                        <label
+                          key={opt}
+                          className="flex items-center gap-3 cursor-pointer bg-white border-[2px] border-brand-border rounded-xl px-4 py-3.5 hover:border-brand-purple/50 transition-all has-[:checked]:border-brand-purple has-[:checked]:bg-brand-purple/5 has-[:checked]:shadow-[0_0_0_1px_rgba(74,35,134,0.15)]"
+                        >
+                          <input
+                            type="radio"
+                            {...register(entryCertField.key, { required: true })}
+                            value={opt}
+                            className="w-4 h-4 accent-[#4a2386] shrink-0"
+                          />
+                          <div>
+                            <span className="text-[13px] font-bold text-brand-slate block">{opt}</span>
+                          </div>
+                        </label>
+                      ))}
+                    </div>
+                    {errors[entryCertField.key] && (
+                      <p className="text-[11.5px] text-red-500 mt-2.5 font-semibold flex items-center gap-1.5">
+                        <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                        </svg>
+                        Please select your entry certificate type to continue.
+                      </p>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* ── All other student fields ─────────────────────────────── */}
               <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                {formFields.map((field: any) => (
-                  <div key={field.key} className={field.type === 'textarea' ? 'md:col-span-2' : ''}>
+                {otherFields.map((field: any) => (
+                  <div key={field.key} className={isFullWidth(field) ? 'md:col-span-2' : ''}>
                     <label className={labelCls}>{field.label}</label>
                     {field.type === 'select' ? (
-                      <select {...register(field.key, { required: true })} className={inputCls}>
+                      <select
+                        {...register(field.key, { required: true })}
+                        className={inputCls}
+                      >
                         <option value="">Select...</option>
-                        {field.options?.map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
+                        {field.options?.map((opt: string) => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
                       </select>
                     ) : field.type === 'deptSelect' ? (
                       <select {...register(field.key)} className={inputCls}>
                         <option value="">Select department...</option>
-                        {(Array.isArray(school.departments) ? school.departments as string[] : JSON.parse(school.departments as any || '[]')).map((d: string) => (
+                        {(
+                          Array.isArray(school.departments)
+                            ? school.departments as string[]
+                            : JSON.parse(school.departments as any || '[]')
+                        ).map((d: string) => (
                           <option key={d} value={d}>{d}</option>
                         ))}
                       </select>
                     ) : field.type === 'textarea' ? (
-                      <textarea {...register(field.key)} placeholder={field.placeholder} rows={3} className={inputCls} />
+                      <textarea
+                        {...register(field.key)}
+                        placeholder={field.placeholder}
+                        rows={3}
+                        className={inputCls}
+                      />
                     ) : (
-                      <input type={field.type} {...register(field.key, { required: true })} placeholder={field.placeholder} className={inputCls} />
+                      <input
+                        type={field.type}
+                        {...register(field.key, { required: true })}
+                        placeholder={field.placeholder}
+                        className={inputCls}
+                      />
                     )}
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Section 2: Documents & Fees — PRE-FILLED */}
+            {/* ── SECTION 2: Documents & Fees ──────────────────────────────── */}
             <div className="bg-white rounded-xl border-[1.5px] border-brand-border overflow-hidden">
               <div className="bg-brand-pale border-b border-brand-border px-5 py-3.5 flex items-center gap-2.5">
                 <div className="w-6 h-6 bg-brand-purple text-white rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">2</div>
-                <h3 className="text-[13.5px] font-extrabold text-brand-slate">Documents & Fees Required</h3>
+                <h3 className="text-[13.5px] font-extrabold text-brand-slate">Documents &amp; Fees Required</h3>
               </div>
               <div className="p-4 sm:p-5">
                 <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-[12px] text-amber-800 flex items-start gap-2 mb-4">
-                  <svg className="w-4 h-4 shrink-0 mt-0.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <svg className="w-4 h-4 shrink-0 mt-0.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                   All documents listed below are <strong>required</strong> for your application. The total fee is automatically calculated.
                 </div>
                 <div className="overflow-x-auto rounded-lg border border-brand-border -mx-1 sm:mx-0">
@@ -221,12 +315,14 @@ export default function ApplyForm({ university, school, department }: {
                       </tr>
                     </thead>
                     <tbody>
-                      {/* Processing fee row */}
+                      {/* Platform processing fee row */}
                       <tr className="bg-brand-pale/50">
                         <td className="p-3 text-center"><span className="text-brand-purple font-bold text-base">✓</span></td>
                         <td className="p-3 text-[13px] font-semibold text-brand-slate">Platform Processing &amp; Service Fee</td>
                         <td className="p-3 text-right">
-                          <span className="bg-brand-pale text-brand-purple rounded px-2 py-1 text-[12px] font-bold tabular-nums">{processingFee.toLocaleString()}</span>
+                          <span className="bg-brand-pale text-brand-purple rounded px-2 py-1 text-[12px] font-bold tabular-nums">
+                            {processingFee.toLocaleString()}
+                          </span>
                         </td>
                       </tr>
                       {requirements.map((req: any, i: number) => (
@@ -254,7 +350,7 @@ export default function ApplyForm({ university, school, department }: {
               </div>
             </div>
 
-            {/* Section 3: Additional Notes */}
+            {/* ── SECTION 3: Additional Notes ──────────────────────────────── */}
             <div className="bg-white rounded-xl border-[1.5px] border-brand-border overflow-hidden">
               <div className="bg-brand-pale border-b border-brand-border px-5 py-3.5 flex items-center gap-2.5">
                 <div className="w-6 h-6 bg-brand-purple text-white rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">3</div>
@@ -271,7 +367,7 @@ export default function ApplyForm({ university, school, department }: {
                     'You will be notified of results via this portal and by official correspondence.',
                   ].map((note, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-purple mt-1.5 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-purple mt-1.5 shrink-0" />
                       {note}
                     </li>
                   ))}
@@ -280,15 +376,16 @@ export default function ApplyForm({ university, school, department }: {
             </div>
           </div>
 
-          {/* RIGHT — sidebar: stacks below form on mobile, sticky on desktop */}
+          {/* ── RIGHT: Sticky sidebar ────────────────────────────────────── */}
           <div className="w-full lg:sticky lg:top-[84px]">
             <div className="bg-white border border-brand-border rounded-xl overflow-hidden mb-4">
-              {/* Solid header — no gradient */}
               <div className="bg-brand-purple px-6 py-4 text-white text-[13px] font-bold flex items-center gap-2">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
                 Application Summary
               </div>
-              {/* Body — 24px padding */}
               <div className="p-6 space-y-3">
                 {[['University', university.name], ['School', school.n], ['Department', department]].map(([k, v]) => (
                   <div key={k} className="flex justify-between py-2 border-b border-brand-border last:border-0 text-[12px]">
@@ -303,7 +400,7 @@ export default function ApplyForm({ university, school, department }: {
               </div>
             </div>
 
-            {/* Submit button — desktop only (mobile uses sticky bar below) */}
+            {/* Desktop submit button */}
             <div className="hidden lg:block">
               <button
                 type="submit"
@@ -311,9 +408,20 @@ export default function ApplyForm({ university, school, department }: {
                 className="w-full text-[14px] font-bold text-white bg-brand-purple py-4 rounded-xl hover:bg-brand-purple2 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
-                  <><svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>Generating PDF...</>
+                  <>
+                    <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    Generating PDF...
+                  </>
                 ) : (
-                  <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Submit &amp; Download PDF</>
+                  <>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Submit &amp; Download PDF
+                  </>
                 )}
               </button>
               <p className="text-[11px] text-brand-muted text-center mt-3 leading-relaxed">
@@ -322,7 +430,7 @@ export default function ApplyForm({ university, school, department }: {
             </div>
           </div>
 
-          {/* Mobile sticky submit bar — INSIDE the form so type=submit works with react-hook-form */}
+          {/* Mobile sticky submit bar */}
           <div className="fixed bottom-0 left-0 right-0 z-[800] lg:hidden bg-white border-t border-brand-border px-4 py-3 flex items-center gap-3 shadow-[0_-4px_12px_rgba(0,0,0,0.10)]">
             <div className="flex-1 min-w-0">
               <div className="text-[10px] font-medium text-brand-muted uppercase tracking-wider">Total Payable</div>
@@ -334,9 +442,20 @@ export default function ApplyForm({ university, school, department }: {
               className="shrink-0 text-[13px] font-bold text-white bg-brand-purple px-5 py-3 rounded-xl flex items-center gap-2 disabled:opacity-60 active:bg-brand-purple2 transition-colors"
             >
               {loading ? (
-                <><svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>Generating...</>
+                <>
+                  <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                  Generating...
+                </>
               ) : (
-                <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Submit &amp; PDF</>
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Submit &amp; PDF
+                </>
               )}
             </button>
           </div>

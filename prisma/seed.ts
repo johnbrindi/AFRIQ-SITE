@@ -59,18 +59,25 @@ async function main() {
     if (!uniExists) continue;
 
     for (const school of group.schools) {
-      // Find school by name and universityId to update, or create
-      const existing = await prisma.school.findFirst({
-        where: {
-          universityId,
-          n: school.n
-        }
-      });
+      // Match by acr+universityId first (so renamed schools are updated, not duplicated),
+      // then fall back to matching by n (for schools without an acr).
+      let existing = null;
+      if (school.acr) {
+        existing = await prisma.school.findFirst({
+          where: { universityId, acr: school.acr }
+        });
+      }
+      if (!existing) {
+        existing = await prisma.school.findFirst({
+          where: { universityId, n: school.n }
+        });
+      }
 
       if (existing) {
         await prisma.school.update({
           where: { id: existing.id },
           data: {
+            n: school.n,
             acr: school.acr,
             t: school.t,
             i: school.i,
