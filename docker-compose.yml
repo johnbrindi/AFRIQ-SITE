@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  afriq-site:
+    image: ${DOCKER_USERNAME:-yourusername}/afriq-site:latest
+    container_name: afriq-site
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      # These variables must be provided in a .env file on the VPS
+      - DATABASE_URL=${DATABASE_URL}
+      - DIRECT_URL=${DIRECT_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-http://localhost:3000}
+      - PORT=3000
+    networks:
+      - afriq-network
+
+networks:
+  afriq-network:
+    driver: bridge

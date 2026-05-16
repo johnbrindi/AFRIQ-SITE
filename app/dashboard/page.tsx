@@ -1,6 +1,8 @@
 import { prisma } from '@/lib/db';
 import UniversityGrid from '@/components/portal/UniversityGrid';
 
+export const dynamic = 'force-dynamic';
+
 export default async function DashboardPage() {
   const universities = await prisma.university.findMany({
     include: {

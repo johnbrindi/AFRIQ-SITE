@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+.env
+Dockerfile
+.dockerignore
+update_schools.js
+find_schools.js
+find_schools_db.js
+get_schools.js
+*.tar
