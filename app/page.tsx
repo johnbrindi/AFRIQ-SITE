@@ -7,7 +7,7 @@ import { prisma } from '@/lib/db';
 import UniversityCard from '@/components/portal/UniversityCard';
 import { Prisma } from '@prisma/client';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 type UniversityWithSchools = Prisma.UniversityGetPayload<{ include: { schools: true } }>;
 

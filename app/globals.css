@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,9 +38,14 @@
     color: var(--slate);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
     /* Ensure body takes full width on mobile */
     width: 100%;
     max-width: 100vw;
+  }
+
+  .font-serif, [class*="font-serif"] {
+    font-family: 'Playfair Display', Georgia, serif;
   }
 
   /* Ensure images don't overflow */

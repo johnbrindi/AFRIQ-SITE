@@ -1,11 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { SessionProvider } from 'next-auth/react';
 import TopBar from '@/components/portal/TopBar';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
   title: 'AFRIQ University Portal',
@@ -18,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={inter.className}>
+    <html lang="en">
+      <body>
         <SessionProvider>
           <TopBar />
           {children}
