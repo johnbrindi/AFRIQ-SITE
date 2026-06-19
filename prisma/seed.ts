@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   console.log('Seeding database...');
-  
+
   // Seed Universities
   const universitiesPath = path.join(process.cwd(), 'data', 'universities.json');
   const universities = JSON.parse(fs.readFileSync(universitiesPath, 'utf8'));
@@ -27,6 +27,8 @@ async function main() {
         about: uni.about,
         facts: uni.facts,
         missions: uni.missions,
+        type: uni.type,
+        country: uni.country,
       },
       create: {
         id: uni.id,
@@ -42,6 +44,8 @@ async function main() {
         about: uni.about,
         facts: uni.facts,
         missions: uni.missions,
+        type: uni.type,
+        country: uni.country,
       },
     });
   }
@@ -53,7 +57,7 @@ async function main() {
 
   for (const group of schoolsData) {
     const universityId = group.university_id;
-    
+
     // Skip if university doesn't exist
     const uniExists = await prisma.university.findUnique({ where: { id: universityId } });
     if (!uniExists) continue;
@@ -102,7 +106,7 @@ async function main() {
       }
     }
   }
-  
+
   console.log('Schools seeded/updated.');
 }
 

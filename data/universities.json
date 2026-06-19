@@ -284,5 +284,239 @@
       "Schools": "8",
       "Language": "French"
     }
+  },
+  {
+    "id": 101,
+    "name": "Ebenezer Higher Institute of Science and Technology",
+    "short": "EHIST",
+    "loc": "Sonac Street, Bamenda",
+    "city": "Bamenda",
+    "reg": "North West Region",
+    "tag": "Science & Technology",
+    "est": "2010",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/EBENEZER HIGHER INSTITUE cover image.jpg",
+    "logo": "/images/private-university-images/EBENEZER HIGHER INSTITUE logo.jpg",
+    "about": "Ebenezer Higher Institute of Science and Technology (EHIST) is a private institution located on Sonac Street, Bamenda. It offers programmes in science and technology disciplines to equip students with practical and theoretical skills for the modern workforce.",
+    "missions": [
+      "Provide quality science and technology education",
+      "Develop practical skills for industry and research",
+      "Foster innovation and entrepreneurship among students"
+    ],
+    "facts": {
+      "Established": "2010",
+      "Type": "Private University",
+      "Location": "Sonac Street, Bamenda",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 102,
+    "name": "Abege University Institute",
+    "short": "AUI",
+    "loc": "New Road Mile 2, Bamenda",
+    "city": "Bamenda",
+    "reg": "North West Region",
+    "tag": "Multi-disciplinary",
+    "est": "2012",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/\u200bABEGE UNIVERSITY INSTITUTE cover image.jpg",
+    "logo": "/images/private-university-images/\u200bABEGE UNIVERSITY INSTITUTE logo.jpg",
+    "about": "Abege University Institute is a private higher education institution located at New Road Mile 2, Bamenda. The institute provides accessible quality education to students in the North West Region and beyond.",
+    "missions": [
+      "Offer affordable quality higher education",
+      "Provide industry-relevant programmes",
+      "Support student professional development"
+    ],
+    "facts": {
+      "Established": "2012",
+      "Type": "Private University Institute",
+      "Location": "New Road Mile 2, Bamenda",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 103,
+    "name": "Higher Institute of Professional and Management Studies",
+    "short": "HIPMS",
+    "loc": "Commercial Avenue, Bamenda",
+    "city": "Bamenda",
+    "reg": "North West Region",
+    "tag": "Business & Management",
+    "est": "2008",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/\u200bHIGHER INSTITUTE OF PROFESSIONAL AND MANAGEMENt cover image.jpg",
+    "logo": "/images/private-university-images/HIGHER INSTITUTE OF PROFESSIONAL AND MANAGEMENT logo.jpg",
+    "about": "The Higher Institute of Professional and Management Studies (HIPMS) is situated on Commercial Avenue, Bamenda. It specialises in professional and management education, preparing graduates for leadership roles in business and public service.",
+    "missions": [
+      "Train competent managers and business leaders",
+      "Provide professional and vocational education",
+      "Bridge the gap between academic learning and workplace demands"
+    ],
+    "facts": {
+      "Established": "2008",
+      "Type": "Private Higher Institute",
+      "Location": "Commercial Avenue, Bamenda",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 104,
+    "name": "Prestige Higher Institute of Professional Training",
+    "short": "PHIPT",
+    "loc": "Mile 3, Bamenda",
+    "city": "Bamenda",
+    "reg": "North West Region",
+    "tag": "Professional Training",
+    "est": "2015",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/PRESTIGE HIGHER INSTITUTE OF PROFESSIONAL TRAINING cover image.jpg",
+    "logo": "/images/private-university-images/PRESTIGE HIGHER INSTITUTE OF PROFESSIONAL TRAINING logo.jpg",
+    "about": "Prestige Higher Institute of Professional Training (PHIPT) is located at Mile 3, Bamenda. It focuses on delivering high-quality professional training programmes that meet the demands of the local and national job market.",
+    "missions": [
+      "Deliver targeted professional training",
+      "Partner with industry for relevant curricula",
+      "Empower graduates for immediate workforce entry"
+    ],
+    "facts": {
+      "Established": "2015",
+      "Type": "Private Higher Institute",
+      "Location": "Mile 3, Bamenda",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 105,
+    "name": "Yaoundé International Business School",
+    "short": "YIBS",
+    "loc": "Yaoundé",
+    "city": "Yaoundé",
+    "reg": "Centre Region",
+    "tag": "Business & Commerce",
+    "est": "2011",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/\u200bYAOUNDÉ INTERNATIONAL BUSINESS SCHOOL, YAOUNDÉ cover image.jpg",
+    "logo": "/images/private-university-images/\u200bYAOUNDÉ INTERNATIONAL BUSINESS SCHOOL, YAOUNDÉ logo.png",
+    "about": "Yaoundé International Business School (YIBS) is a leading private business institution in Yaoundé offering internationally recognised business and management programmes. It aims to produce world-class business professionals from Cameroon.",
+    "missions": [
+      "Provide internationally-benchmarked business education",
+      "Foster global business leadership from Africa",
+      "Connect students with international markets and networks"
+    ],
+    "facts": {
+      "Established": "2011",
+      "Type": "Private Business School",
+      "Location": "Yaoundé",
+      "Language": "English / French"
+    }
+  },
+  {
+    "id": 106,
+    "name": "St Louis University Institute",
+    "short": "SLUI",
+    "loc": "Bamenda / Douala / Yaoundé",
+    "city": "Bamenda",
+    "reg": "Multi-Region",
+    "tag": "Multi-disciplinary",
+    "est": "2005",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/ST LOUIS UNIVERSITY INSTITUTE. BAMENDA, DOUALA, YAOUNDÉ cover image.jpg",
+    "logo": "/images/private-university-images/ST LOUIS UNIVERSITY INSTITUTE. BAMENDA, DOUALA, YAOUNDÉ logo.jpg",
+    "about": "St Louis University Institute is a multi-campus private university with locations in Bamenda, Douala, and Yaoundé. It offers a wide range of programmes across disciplines, serving students across Cameroon's major cities.",
+    "missions": [
+      "Provide diverse higher education across multiple campuses",
+      "Serve students in Anglophone and Francophone regions",
+      "Deliver faith-based values-driven education"
+    ],
+    "facts": {
+      "Established": "2005",
+      "Type": "Private University Institute",
+      "Campuses": "Bamenda, Douala, Yaoundé",
+      "Language": "English / French"
+    }
+  },
+  {
+    "id": 201,
+    "name": "University of Ilorin",
+    "short": "UNILORIN",
+    "loc": "Ilorin, Kwara State",
+    "city": "Ilorin",
+    "reg": "Kwara State",
+    "tag": "Comprehensive University",
+    "est": "1975",
+    "type": "abroad",
+    "country": "Nigeria",
+    "img": "/images/schools-abroad/University of ilorin , kwara state cover image.jpg",
+    "logo": "/images/schools-abroad/University of ilorin , kwara state logo.jpg",
+    "about": "The University of Ilorin (UNILORIN) is a federal university located in Ilorin, Kwara State, Nigeria. It is one of Nigeria's premier universities, known for its strong programmes in medicine, engineering, law, and arts.",
+    "missions": [
+      "Advance learning through teaching and research",
+      "Foster intellectual and personal development",
+      "Contribute to national and regional development"
+    ],
+    "facts": {
+      "Established": "1975",
+      "Type": "Federal University",
+      "Country": "Nigeria",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 202,
+    "name": "Veritas University",
+    "short": "VERITAS",
+    "loc": "Abuja, FCT",
+    "city": "Abuja",
+    "reg": "Federal Capital Territory",
+    "tag": "Catholic University",
+    "est": "2007",
+    "type": "abroad",
+    "country": "Nigeria",
+    "img": "/images/schools-abroad/\u200bVERITAS university , Abuja state cover image.jpg",
+    "logo": "/images/schools-abroad/\u200bVERITAS university , Abuja state logo.jpg",
+    "about": "Veritas University, Abuja is a Catholic University established by the Catholic Bishops' Conference of Nigeria. It offers rigorous academic programmes alongside a strong values and ethics framework.",
+    "missions": [
+      "Provide faith-based quality higher education",
+      "Promote integrity, excellence, and service",
+      "Contribute to the development of Nigeria and Africa"
+    ],
+    "facts": {
+      "Established": "2007",
+      "Type": "Private Catholic University",
+      "Country": "Nigeria",
+      "Language": "English"
+    }
+  },
+  {
+    "id": 203,
+    "name": "Kampala University",
+    "short": "KU",
+    "loc": "Ggaba, Kampala",
+    "city": "Kampala",
+    "reg": "Ggaba State",
+    "tag": "East African University",
+    "est": "2005",
+    "type": "abroad",
+    "country": "Uganda",
+    "img": "/images/schools-abroad/\u200bKampala University Uganda, Ggaba state cover image.jpg",
+    "logo": "/images/schools-abroad/\u200bKampala University Uganda, Ggaba state logo.png",
+    "about": "Kampala University (KU) is a private university located in Ggaba, Kampala, Uganda. It offers undergraduate and postgraduate programmes across various disciplines and welcomes international students from across Africa.",
+    "missions": [
+      "Provide accessible and quality higher education in East Africa",
+      "Promote regional integration through academic exchange",
+      "Develop research relevant to African development challenges"
+    ],
+    "facts": {
+      "Established": "2005",
+      "Type": "Private University",
+      "Country": "Uganda",
+      "Language": "English"
+    }
   }
 ]

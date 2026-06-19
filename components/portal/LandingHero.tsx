@@ -4,13 +4,13 @@ export default function LandingHero() {
   return (
     <section className="min-h-screen relative flex items-center px-4 md:px-[var(--px)] overflow-hidden pt-[var(--nav-h)]">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: 'url("/afriq-images/afriq-cover-image.jpeg")' }}
       >
         <div className="absolute inset-0 bg-[#1a0b2e]/90 md:bg-gradient-to-r md:from-[#1a0b2e] md:via-[#1a0b2e]/95 md:to-transparent" />
       </div>
-      
+
       {/* Decorative Circles from the design */}
       <div className="absolute rounded-full pointer-events-none z-10 border border-white/5 right-[-5%] top-[-10%] w-[600px] h-[600px]" />
       <div className="absolute rounded-full pointer-events-none z-10 border border-white/5 right-[5%] top-[0%] w-[450px] h-[450px]" />
@@ -21,13 +21,13 @@ export default function LandingHero() {
             <div className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
             2026 Applications Open
           </div>
-          
+
           <h1 className="font-serif text-[clamp(34px,6vw,84px)] font-black text-white leading-[1.05] tracking-tight mb-6 sm:mb-8">
             Your University <br />
             <span className="text-brand-gold2 italic">Journey Starts</span> <br />
             Here.
           </h1>
-          
+
           <p className="text-[15px] sm:text-[16px] text-white/70 leading-relaxed max-w-[500px] mb-8 sm:mb-10">
             AFRIQ connects Cameroonian students to all 11 state universities — browse every faculty, compare programmes, and apply in minutes.
           </p>
@@ -36,6 +36,10 @@ export default function LandingHero() {
             <Link href="/auth" className="text-[14px] font-bold text-brand-purple bg-white border-none px-8 py-3.5 rounded-lg hover:shadow-card-lg hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2">
               Get Started Free
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </Link>
+            <Link href="/apply" className="text-[14px] font-bold text-brand-gold2 bg-brand-gold/15 border-[1.5px] border-brand-gold/40 px-8 py-3.5 rounded-lg hover:bg-brand-gold/25 transition-all inline-flex items-center justify-center gap-2">
+              Submit an Enquiry
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             </Link>
             <Link href="#explore" className="text-[14px] font-bold text-white bg-white/10 border-[1.5px] border-white/30 px-8 py-3.5 rounded-lg hover:bg-white/15 transition-all inline-flex items-center justify-center gap-2">
               Explore Universities

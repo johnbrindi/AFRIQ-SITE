@@ -23,9 +23,9 @@ export default function Error({
         </div>
         <h2 className="text-[20px] font-black text-brand-slate tracking-tight mb-3">Database Connection Error</h2>
         <p className="text-[14px] text-brand-muted leading-relaxed mb-8">
-          We couldn't connect to the database server. If you are using Neon, the database might be paused due to inactivity, or your connection string is incorrect.
+          We couldn't connect to the database server. The database may be unavailable or your connection settings may be incorrect.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             onClick={() => reset()}

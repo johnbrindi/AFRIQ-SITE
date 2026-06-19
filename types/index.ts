@@ -10,6 +10,8 @@ export interface University {
   tag: string;
   img: string;
   logo: string | null;
+  type?: string;    // 'state' | 'private' | 'abroad'
+  country?: string; // 'Cameroon' or other
   schools: School[];
 }
 

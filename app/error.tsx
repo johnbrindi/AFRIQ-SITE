@@ -26,7 +26,7 @@ export default function GlobalError({
         <p className="text-[15px] text-brand-muted leading-relaxed mb-10">
           The application encountered an unexpected error. This is often due to a database connection timeout or a network issue. Please try refreshing the page.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => reset()}
@@ -41,9 +41,9 @@ export default function GlobalError({
             Home
           </Link>
         </div>
-        
+
         <p className="mt-10 text-[12px] text-brand-muted opacity-60">
-          If you are the administrator, please check your database status in the Neon console.
+          If you are the administrator, please check your database connection settings.
         </p>
       </div>
     </div>

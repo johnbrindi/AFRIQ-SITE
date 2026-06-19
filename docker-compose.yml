@@ -7,8 +7,15 @@ services:
     restart: always
     ports:
       - "3000:3000"
-    env_file:
-      - .env
+    environment:
+      # These variables must be provided in a .env file on the VPS
+      - DATABASE_URL=${DATABASE_URL}
+      - DIRECT_URL=${DIRECT_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-http://localhost:3000}
+      - AUTH_URL=${NEXTAUTH_URL:-http://localhost:3000}
+      - AUTH_TRUST_HOST=true
+      - PORT=3000
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:

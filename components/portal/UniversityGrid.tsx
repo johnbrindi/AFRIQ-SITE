@@ -5,13 +5,14 @@ import { University } from '@/types';
 import UniversityCard from './UniversityCard';
 
 export default function UniversityGrid({ universities }: { universities: University[] }) {
-  const [filterMode, setFilterMode] = useState<'all' | 'state' | 'private'>('all');
+  const [filterMode, setFilterMode] = useState<'all' | 'state' | 'private' | 'abroad'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filtered = universities.filter((u) => {
-    // Only State universities in this DB anyway, but let's implement the filter as it was
-    const matchesFilter = filterMode === 'all' || u.tag.toLowerCase().includes(filterMode);
-    const matchesSearch = u.name.toLowerCase().includes(searchQuery.toLowerCase()) || u.short.toLowerCase().includes(searchQuery.toLowerCase());
+    const uType = u.type || 'state'; // default older entries to state
+    const matchesFilter = filterMode === 'all' || uType === filterMode;
+    const matchesSearch = u.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (u.short && u.short.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesFilter && matchesSearch;
   });
 
@@ -20,31 +21,37 @@ export default function UniversityGrid({ universities }: { universities: Univers
       <div className="max-w-brand-portal mx-auto pt-5 px-4 md:px-[var(--px)] flex flex-col sm:flex-row gap-3">
         {/* Filter tabs */}
         <div className="flex bg-white p-1 rounded-xl border border-brand-border shrink-0 overflow-x-auto">
-          <button 
+          <button
             onClick={() => setFilterMode('all')}
             className={`text-[12.5px] font-semibold px-4 py-1.5 rounded-lg transition-colors whitespace-nowrap ${filterMode === 'all' ? 'bg-brand-purple text-white' : 'text-brand-muted hover:bg-brand-pale'}`}
           >
             All Universities
           </button>
-          <button 
+          <button
             onClick={() => setFilterMode('state')}
             className={`text-[12.5px] font-semibold px-4 py-1.5 rounded-lg transition-colors whitespace-nowrap ${filterMode === 'state' ? 'bg-brand-purple text-white' : 'text-brand-muted hover:bg-brand-pale'}`}
           >
             State Only
           </button>
-          <button 
+          <button
             onClick={() => setFilterMode('private')}
             className={`text-[12.5px] font-semibold px-4 py-1.5 rounded-lg transition-colors whitespace-nowrap ${filterMode === 'private' ? 'bg-brand-purple text-white' : 'text-brand-muted hover:bg-brand-pale'}`}
           >
             Private
           </button>
+          <button
+            onClick={() => setFilterMode('abroad')}
+            className={`text-[12.5px] font-semibold px-4 py-1.5 rounded-lg transition-colors whitespace-nowrap ${filterMode === 'abroad' ? 'bg-brand-purple text-white' : 'text-brand-muted hover:bg-brand-pale'}`}
+          >
+            Abroad
+          </button>
         </div>
 
         {/* Search */}
         <div className="flex-1 relative">
-          <input 
-            type="text" 
-            placeholder="Search universities..." 
+          <input
+            type="text"
+            placeholder="Search universities..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full text-[13px] bg-white border border-brand-border rounded-xl py-2.5 pr-3.5 pl-9 outline-none transition-colors text-brand-slate focus:border-brand-purple"
