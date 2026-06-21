@@ -2,17 +2,12 @@ import { prisma } from '@/lib/db';
 import UniversityGrid from '@/components/portal/UniversityGrid';
 import Link from 'next/link';
 
+import { getCachedUniversities } from '@/lib/queries';
+
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  const universities = await prisma.university.findMany({
-    include: {
-      schools: true,
-    },
-    orderBy: {
-      id: 'asc',
-    },
-  });
+  const universities = await getCachedUniversities();
 
   const leadCount = await (prisma as any).studentLead.count().catch(() => 0) as number;
 
