@@ -2,15 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import fs from 'fs';
 import path from 'path';
 
-// Force Prisma to use DIRECT_URL during seeding exactly like `npx prisma db push` does
-const fixUrl = (url: string | undefined) => {
-  if (!url) return undefined;
-  return url
-    .replace(/aws-0-eu-west-1\.pooler\.supabase\.com:\d+/g, 'db.zizfujfcndjharysytmx.supabase.co:5432')
-    .replace('?pgbouncer=true', '');
-};
-
-const urlToUse = fixUrl(process.env.DIRECT_URL) || fixUrl(process.env.DATABASE_URL);
+const urlToUse = process.env.DIRECT_URL || process.env.DATABASE_URL;
 
 const prisma = new PrismaClient({
   datasources: {

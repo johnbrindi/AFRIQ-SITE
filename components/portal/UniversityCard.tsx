@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { University } from '@/types';
+import { hardcodedImages } from '@/lib/hardcodedImages';
 
 export default function UniversityCard({ uni }: { uni: University }) {
+  const customImg = hardcodedImages[uni.id]?.img || uni.img;
+  const customLogo = hardcodedImages[uni.id]?.logo || uni.logo;
   return (
     <Link href={`/university/${uni.id}`} className="block group">
       <div className="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-brand-purple hover:shadow-[0_4px_16px_rgba(75,29,121,0.12)]">
@@ -9,7 +12,7 @@ export default function UniversityCard({ uni }: { uni: University }) {
         {/* Image */}
         <div className="relative">
           <img
-            src={uni.img || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80'}
+            src={customImg || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80'}
             alt={uni.name}
             className="w-full h-[160px] object-cover bg-brand-pale block"
           />
@@ -32,8 +35,8 @@ export default function UniversityCard({ uni }: { uni: University }) {
           {/* Logo + name row */}
           <div className="flex items-center gap-3 mb-3">
             <div className="w-9 h-9 rounded-lg overflow-hidden border border-brand-border bg-brand-pale flex items-center justify-center shrink-0">
-              {uni.logo ? (
-                <img src={uni.logo} alt="Logo" className="w-full h-full object-contain" />
+              {customLogo ? (
+                <img src={customLogo} alt="Logo" className="w-full h-full object-contain" />
               ) : (
                 <span className="font-bold text-brand-purple text-[9px] text-center leading-tight p-1">{uni.short}</span>
               )}

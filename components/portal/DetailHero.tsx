@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import { University } from '@/types';
+import { hardcodedImages } from '@/lib/hardcodedImages';
 
 export default function DetailHero({ uni }: { uni: University }) {
+  const customImg = hardcodedImages[uni.id]?.img || uni.img;
+  const customLogo = hardcodedImages[uni.id]?.logo || uni.logo;
   return (
     <div className="relative h-[220px] sm:h-[300px] md:h-[380px] overflow-hidden">
       <img 
-        src={uni.img || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1800&q=80'} 
+        src={customImg || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1800&q=80'} 
         alt={uni.name} 
         className="w-full h-full object-cover brightness-[0.35]" 
       />
@@ -23,8 +26,8 @@ export default function DetailHero({ uni }: { uni: University }) {
       <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 md:px-[var(--px)]">
         <div className="flex items-end gap-4">
           <div className="w-[60px] h-[60px] bg-white rounded-xl overflow-hidden shrink-0 border-2 border-white/70 shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex items-center justify-center mb-1">
-            {uni.logo ? (
-              <img src={uni.logo} alt="Logo" className="w-full h-full object-contain" />
+            {customLogo ? (
+              <img src={customLogo} alt="Logo" className="w-full h-full object-contain" />
             ) : (
               <div className="w-full h-full bg-brand-pale flex items-center justify-center font-bold text-brand-purple">{uni.short}</div>
             )}
