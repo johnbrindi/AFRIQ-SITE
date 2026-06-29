@@ -1,15 +1,20 @@
-import { prisma } from '@/lib/db';
 import UniversityGrid from '@/components/portal/UniversityGrid';
-import Link from 'next/link';
-
 import { getCachedUniversities } from '@/lib/queries';
+import { auth } from '@/lib/auth';
+import { redirect } from 'next/navigation';
 
+// Always server-render — never statically cache (dashboard is user-specific)
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  const universities = await getCachedUniversities();
+  const session = await auth();
 
-  const leadCount = await (prisma as any).studentLead.count().catch(() => 0) as number;
+  // If no valid session, send to sign-in page
+  if (!session?.user?.id) {
+    redirect('/auth?callbackUrl=/dashboard');
+  }
+
+  const universities = await getCachedUniversities();
 
   return (
     <main className="min-h-screen pt-[var(--nav-h)] bg-brand-bg">
@@ -19,14 +24,11 @@ export default async function DashboardPage() {
           <h1 className="font-serif text-[clamp(24px,3vw,34px)] font-black text-white mb-2 leading-tight">
             Select a University
           </h1>
-          <p className="text-[14px] text-white/70">Browse available state universities and start your application process.</p>
+          <p className="text-[14px] text-white/70">Browse available universities and start your application process.</p>
         </div>
       </div>
 
       <UniversityGrid universities={universities as any} />
-
-
     </main>
   );
 }
-

@@ -1,7 +1,9 @@
 import { notFound, redirect } from 'next/navigation';
-import { prisma } from '@/lib/db';
+import { getCachedUniversities } from '@/lib/queries';
+import { auth } from '@/lib/auth';
 import ApplyForm from '@/components/portal/ApplyForm';
 import Link from 'next/link';
+import { prisma } from '@/lib/db';
 
 export default async function ApplyPage({ 
   params, 
@@ -10,6 +12,22 @@ export default async function ApplyPage({
   params: { id: string },
   searchParams: { schoolIndex?: string, deptIndex?: string }
 }) {
+  const session = await auth();
+  if (!session?.user?.id) {
+    redirect('/auth');
+  }
+
+  // Verify the user still exists in the database
+  const dbUser = await prisma.user.findUnique({
+    where: { id: parseInt(session.user.id) },
+    select: { id: true }
+  });
+
+  if (!dbUser) {
+    // Force logout if the user was deleted (clears cookies and redirects to /auth)
+    redirect('/api/logout');
+  }
+
   const universityId = parseInt(params.id);
   const schoolIndex = searchParams.schoolIndex ? parseInt(searchParams.schoolIndex) : NaN;
   const deptIndex = searchParams.deptIndex ? parseInt(searchParams.deptIndex) : NaN;
@@ -18,10 +36,14 @@ export default async function ApplyPage({
     redirect(`/university/${params.id}`);
   }
 
-  const university = await prisma.university.findUnique({
-    where: { id: universityId },
-    include: { schools: true },
-  });
+  // Use cached query to avoid DB hit on every application page load
+  let university: any = null;
+  try {
+    const all = await getCachedUniversities();
+    university = all.find((u) => u.id === universityId) ?? null;
+  } catch {
+    notFound();
+  }
 
   if (!university || !university.schools[schoolIndex]) {
     notFound();

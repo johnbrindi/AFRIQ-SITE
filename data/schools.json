@@ -12577,5 +12577,4620 @@
         ]
       }
     ]
+  },
+  {
+    "university_id": 107,
+    "schools": [
+      {
+        "n": "Faculty of Business & Management Sciences (FBMS)",
+        "acr": "CATUC-FBMS",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting",
+          "Banking & Finance",
+          "Economics",
+          "Insurance & Risk Management",
+          "Management & Entrepreneurship",
+          "Marketing",
+          "Microfinance Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "olPoints",
+            "label": "O/L Subjects Passed (Number)",
+            "type": "number",
+            "placeholder": "e.g. 7"
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "CATUC Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (CATUC Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "Baptism / Church Membership Letter (if applicable)",
+            "amount": 0
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Humanities & Social Sciences (FHSS)",
+        "acr": "CATUC-FHSS",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "Anthropology",
+          "English Language & Literature",
+          "Geography & Environmental Studies",
+          "History",
+          "Philosophy",
+          "Religious Studies & Ethics"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "CATUC Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (CATUC Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "Baptism / Church Membership Letter (if applicable)",
+            "amount": 0
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Science (FS)",
+        "acr": "CATUC-FS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochemistry",
+          "Computer Science",
+          "Environmental Science",
+          "Mathematics & Statistics",
+          "Microbiology",
+          "Physics"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "olMathGrade",
+            "label": "O/L Mathematics Grade",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Science Subjects (e.g. Chemistry, Biology, Physics, Maths)",
+            "type": "text",
+            "placeholder": "e.g. Chemistry, Biology, Mathematics"
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "CATUC Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips — Science subjects required",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (CATUC Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "School of Tropical Agriculture & Natural Resources (STANR)",
+        "acr": "CATUC-STANR",
+        "t": "School",
+        "i": "env",
+        "departments": [
+          "Agricultural Economics & Rural Development",
+          "Animal Production Science",
+          "Crop Production & Soil Science",
+          "Forestry & Wildlife Management",
+          "Food Science & Nutrition",
+          "Natural Resource Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Subjects (Biology & Chemistry or Agriculture required)",
+            "type": "text",
+            "placeholder": "e.g. Biology, Chemistry, Agriculture"
+          },
+          {
+            "key": "entranceExam",
+            "label": "Prepared to sit entrance exam?",
+            "type": "select",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "CATUC Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (Biology/Chemistry required)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (CATUC Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "School of Engineering (SENG)",
+        "acr": "CATUC-SENG",
+        "t": "School",
+        "i": "tech",
+        "departments": [
+          "Chemical Engineering",
+          "Civil & Structural Engineering",
+          "Electrical & Electronic Engineering",
+          "Mechanical Engineering",
+          "Petroleum Engineering"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "olMathGrade",
+            "label": "O/L Mathematics Grade (minimum C required)",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Subjects (Mathematics & Physics required)",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Physics, Chemistry"
+          },
+          {
+            "key": "mathGradeAL",
+            "label": "A/L Mathematics Grade",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "entranceExam",
+            "label": "Prepared to sit entrance exam?",
+            "type": "select",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "CATUC Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (Maths & Physics required)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (CATUC Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "School of Health & Medical Sciences (SHMS)",
+        "acr": "CATUC-SHMS",
+        "t": "School",
+        "i": "med",
+        "departments": [
+          "Biomedical Sciences",
+          "Medical Laboratory Science",
+          "Nursing Science (BNSc)",
+          "Public Health",
+          "Doctor of Medicine (MD) — Competitive Entrance"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Science Subjects (Biology & Chemistry required)",
+            "type": "text",
+            "placeholder": "e.g. Biology, Chemistry, Physics"
+          },
+          {
+            "key": "biologyGrade",
+            "label": "A/L Biology Grade",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "chemistryGrade",
+            "label": "A/L Chemistry Grade",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "entranceExam",
+            "label": "Prepared to sit competitive entrance exam?",
+            "type": "select",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "CATUC Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (Biology & Chemistry required)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate (CATUC Standard)",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 101,
+    "schools": [
+      {
+        "n": "Department of Sciences & Technology",
+        "acr": "EHIST-SCI",
+        "t": "Department",
+        "i": "sci",
+        "departments": [
+          "Computer Science & IT",
+          "Electrical & Electronic Engineering Technology",
+          "Telecommunications Technology",
+          "Environmental Science"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Department of Business & Management",
+        "acr": "EHIST-BUS",
+        "t": "Department",
+        "i": "eco",
+        "departments": [
+          "Accounting & Finance",
+          "Business Administration",
+          "Marketing & Commerce",
+          "Human Resource Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 102,
+    "schools": [
+      {
+        "n": "Faculty of Business & Social Sciences",
+        "acr": "AUI-BSS",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting & Taxation",
+          "Banking & Finance",
+          "Business Administration",
+          "Economics",
+          "Marketing",
+          "Public Administration",
+          "Sociology & Anthropology"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Computer Science & IT",
+        "acr": "AUI-CS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Computer Science",
+          "Information Technology",
+          "Software Engineering",
+          "Network & Cybersecurity"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "mathGrade",
+            "label": "Mathematics Grade at O/L",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 103,
+    "schools": [
+      {
+        "n": "School of Professional & Management Studies",
+        "acr": "HIPMS-PMS",
+        "t": "School",
+        "i": "eco",
+        "departments": [
+          "Business Administration & Management",
+          "Project Management",
+          "Human Resource Management",
+          "Financial Management",
+          "Logistics & Supply Chain Management",
+          "Public Administration"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "workExperience",
+            "label": "Relevant Work Experience (if any)",
+            "type": "textarea",
+            "placeholder": "Brief description or N/A"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 104,
+    "schools": [
+      {
+        "n": "Professional Training Division",
+        "acr": "PHIPT-PRO",
+        "t": "Division",
+        "i": "eco",
+        "departments": [
+          "Secretarial Studies & Office Management",
+          "Accounting & Taxation",
+          "Banking & Micro-Finance",
+          "Marketing & Sales",
+          "Tourism & Hospitality Management",
+          "Computer Studies & Digital Skills"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE O/L (Minimum for HND entry)",
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "BEPC (French curriculum)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate (if any)",
+            "type": "text",
+            "placeholder": "e.g. 2024 or N/A"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Mile 3, Bamenda"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 105,
+    "schools": [
+      {
+        "n": "School of Business Administration",
+        "acr": "YIBS-BA",
+        "t": "School",
+        "i": "eco",
+        "departments": [
+          "BBA in Business Administration",
+          "BBA in International Business",
+          "BBA in Entrepreneurship & Innovation",
+          "Bachelor of Accounting & Finance",
+          "Bachelor of Marketing Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "languageProficiency",
+            "label": "Language Proficiency",
+            "type": "select",
+            "options": [
+              "English Only",
+              "French Only",
+              "Bilingual (English & French)"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 20000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Graduate School of Management (MBA)",
+        "acr": "YIBS-MBA",
+        "t": "School",
+        "i": "eco",
+        "departments": [
+          "MBA in General Management",
+          "MBA in Finance & Investment",
+          "MBA in International Trade",
+          "MBA in Digital Business",
+          "MBA in Project Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Yaoundé"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "bachelorDegree",
+            "label": "Bachelor's Degree Field / Subject",
+            "type": "text",
+            "placeholder": "e.g. Business Administration"
+          },
+          {
+            "key": "bachelorInstitution",
+            "label": "Institution Where Bachelor's Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. University of Yaoundé II"
+          },
+          {
+            "key": "bachelorYear",
+            "label": "Year Bachelor's Degree Was Awarded",
+            "type": "text",
+            "placeholder": "e.g. 2022"
+          },
+          {
+            "key": "workExperience",
+            "label": "Professional Work Experience",
+            "type": "textarea",
+            "placeholder": "Employer, role, years of experience"
+          },
+          {
+            "key": "languageProficiency",
+            "label": "Language Proficiency",
+            "type": "select",
+            "options": [
+              "English Only",
+              "French Only",
+              "Bilingual (English & French)"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Bastos, Yaoundé"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 25000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "Bachelor's Degree Certificate & Transcript",
+            "amount": 3000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 106,
+    "schools": [
+      {
+        "n": "Faculty of Arts & Social Sciences",
+        "acr": "SLUI-FASS",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "English Language & Literature",
+          "History & Political Science",
+          "Philosophy",
+          "Sociology & Development Studies",
+          "Communication Studies",
+          "French & Francophone Studies"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "preferredCampus",
+            "label": "Preferred Campus",
+            "type": "select",
+            "options": [
+              "Bamenda",
+              "Douala",
+              "Yaoundé"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Business & Economics",
+        "acr": "SLUI-FBE",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting & Finance",
+          "Banking & Insurance",
+          "Business Administration",
+          "Economics & Statistics",
+          "Entrepreneurship & SME Management",
+          "Marketing & E-Commerce"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "regionOrigin",
+            "label": "Region of Origin",
+            "type": "select",
+            "options": [
+              "Adamawa",
+              "Centre",
+              "East",
+              "Far North",
+              "Littoral",
+              "North",
+              "North West",
+              "South",
+              "South West",
+              "West"
+            ]
+          },
+          {
+            "key": "divisionOrigin",
+            "label": "Division of Origin",
+            "type": "text",
+            "placeholder": "e.g. Mezam"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (General)",
+              "BACC (Technical)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "address",
+            "label": "Residential Address",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda"
+          },
+          {
+            "key": "motherNameContact",
+            "label": "Mother's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "fatherNameContact",
+            "label": "Father's Name & Contact",
+            "type": "text",
+            "placeholder": "Name — +237 6XX XXX XXX"
+          },
+          {
+            "key": "preferredCampus",
+            "label": "Preferred Campus",
+            "type": "select",
+            "options": [
+              "Bamenda",
+              "Douala",
+              "Yaoundé"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "Application / Registration Fee",
+            "amount": 15000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE O/L & A/L Result Slips (certified)",
+            "amount": 2500
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Medical Certificate",
+            "amount": 2500
+          },
+          {
+            "label": "Administrative Processing Fee (AFRIQ)",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 201,
+    "schools": [
+      {
+        "n": "Faculty of Management Sciences",
+        "acr": "UNILORIN-FMS",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting",
+          "Business Administration",
+          "Finance",
+          "Marketing",
+          "Public Administration"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa Processing Guidance",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Engineering & Technology",
+        "acr": "UNILORIN-FET",
+        "t": "Faculty",
+        "i": "tech",
+        "departments": [
+          "Agricultural Engineering",
+          "Chemical Engineering",
+          "Civil Engineering",
+          "Computer Engineering",
+          "Electrical & Electronics Engineering",
+          "Food Engineering",
+          "Mechanical Engineering",
+          "Materials & Metallurgical Engineering"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          },
+          {
+            "key": "mathGrade",
+            "label": "A/L Mathematics Grade (required)",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "physicsGrade",
+            "label": "A/L Physics Grade (required)",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa Processing Guidance",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Arts",
+        "acr": "UNILORIN-FA",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "Arabic",
+          "English",
+          "French",
+          "History & International Studies",
+          "Linguistics & Nigerian Languages",
+          "Performing Arts"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa Processing Guidance",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Physical & Life Sciences",
+        "acr": "UNILORIN-PLS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochemistry",
+          "Microbiology",
+          "Physics",
+          "Zoology",
+          "Chemistry",
+          "Plant Biology & Biotechnology"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Science Subjects (minimum 2 required)",
+            "type": "text",
+            "placeholder": "e.g. Biology, Chemistry, Physics"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa Processing Guidance",
+            "amount": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 202,
+    "schools": [
+      {
+        "n": "Faculty of Management & Social Sciences",
+        "acr": "VERITAS-MSS",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting",
+          "Business Administration",
+          "Economics",
+          "International Relations & Diplomacy",
+          "Mass Communication",
+          "Political Science",
+          "Psychology",
+          "Sociology"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa (Nigeria)",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Natural & Applied Sciences",
+        "acr": "VERITAS-NAS",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Biochemistry",
+          "Computer Science",
+          "Industrial Chemistry",
+          "Mathematics",
+          "Microbiology",
+          "Physics with Electronics"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Science Subjects (required)",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Chemistry, Biology"
+          },
+          {
+            "key": "mathGrade",
+            "label": "Mathematics Grade at O/L",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa (Nigeria)",
+            "amount": 5000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Law",
+        "acr": "VERITAS-LAW",
+        "t": "Faculty",
+        "i": "law",
+        "departments": [
+          "LLB (Bachelor of Laws)",
+          "Business Law",
+          "International Law",
+          "Human Rights Law"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          },
+          {
+            "key": "religion",
+            "label": "Religion",
+            "type": "select",
+            "options": [
+              "Catholic",
+              "Protestant",
+              "Muslim",
+              "Other Christian",
+              "Other"
+            ]
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "ECOWAS Travel Certificate or Student Visa (Nigeria)",
+            "amount": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "university_id": 203,
+    "schools": [
+      {
+        "n": "Faculty of Business & Management",
+        "acr": "KU-FBM",
+        "t": "Faculty",
+        "i": "eco",
+        "departments": [
+          "Accounting & Finance",
+          "Business Administration",
+          "Commerce",
+          "Economics",
+          "Human Resource Management",
+          "Procurement & Supply Chain Management"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Uganda Student Visa Processing Guidance & Support (AFRIQ)",
+            "amount": 8000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Computer Science & IT",
+        "acr": "KU-CSIT",
+        "t": "Faculty",
+        "i": "sci",
+        "departments": [
+          "Computer Science",
+          "Information Technology",
+          "Information Systems",
+          "Software Engineering",
+          "Network Engineering & Cybersecurity"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          },
+          {
+            "key": "mathGrade",
+            "label": "Mathematics Grade at O/L (required)",
+            "type": "text",
+            "placeholder": "e.g. A, B, C"
+          },
+          {
+            "key": "scienceSubjects",
+            "label": "A/L Science Subjects (Maths required)",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Physics, Computer Science"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Uganda Student Visa Processing Guidance & Support (AFRIQ)",
+            "amount": 8000
+          }
+        ]
+      },
+      {
+        "n": "Faculty of Arts & Social Sciences",
+        "acr": "KU-FASS",
+        "t": "Faculty",
+        "i": "arts",
+        "departments": [
+          "Development Studies",
+          "English Language & Literature",
+          "History",
+          "International Relations",
+          "Journalism & Media Studies",
+          "Political Science & Public Administration"
+        ],
+        "formFields": [
+          {
+            "key": "fullName",
+            "label": "Full Names (as on Passport/Birth Certificate)",
+            "type": "text",
+            "placeholder": "e.g. Ngounou Jean Baptiste"
+          },
+          {
+            "key": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+          },
+          {
+            "key": "pob",
+            "label": "Place of Birth",
+            "type": "text",
+            "placeholder": "e.g. Bamenda, Cameroon"
+          },
+          {
+            "key": "sex",
+            "label": "Sex",
+            "type": "select",
+            "options": [
+              "Male",
+              "Female"
+            ]
+          },
+          {
+            "key": "nationality",
+            "label": "Nationality",
+            "type": "text",
+            "placeholder": "e.g. Cameroonian"
+          },
+          {
+            "key": "passportNumber",
+            "label": "International Passport Number",
+            "type": "text",
+            "placeholder": "e.g. A12345678"
+          },
+          {
+            "key": "passportExpiry",
+            "label": "Passport Expiry Date",
+            "type": "date"
+          },
+          {
+            "key": "phone",
+            "label": "Phone Number (with country code)",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "you@email.com"
+          },
+          {
+            "key": "entryCertType",
+            "label": "Entry Certificate Type",
+            "type": "select",
+            "options": [
+              "GCE A/L (Cameroon)",
+              "BACC (Cameroon)",
+              "Baccalauréat (Francophone)"
+            ]
+          },
+          {
+            "key": "olYear",
+            "label": "Year of O/L / BEPC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2021"
+          },
+          {
+            "key": "olSchool",
+            "label": "School Where O/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alYear",
+            "label": "Year of A/L / BACC Certificate",
+            "type": "text",
+            "placeholder": "e.g. 2024"
+          },
+          {
+            "key": "alSchool",
+            "label": "School Where A/L Was Obtained",
+            "type": "text",
+            "placeholder": "e.g. GBHS Bamenda"
+          },
+          {
+            "key": "alSubjects",
+            "label": "A/L Subjects Taken",
+            "type": "text",
+            "placeholder": "e.g. Mathematics, Economics, Commerce"
+          },
+          {
+            "key": "englishProficiency",
+            "label": "English Language Proficiency",
+            "type": "select",
+            "options": [
+              "Native / First Language",
+              "GCE O/L English Pass (C or above)",
+              "IELTS / TOEFL Certificate"
+            ]
+          },
+          {
+            "key": "address",
+            "label": "Home Address (Cameroon)",
+            "type": "text",
+            "placeholder": "e.g. Nkwen, Bamenda, NW Region"
+          },
+          {
+            "key": "parentContact",
+            "label": "Parent / Guardian Contact",
+            "type": "tel",
+            "placeholder": "+237 6XX XXX XXX"
+          },
+          {
+            "key": "emergencyContact",
+            "label": "Emergency Contact (destination country, if any)",
+            "type": "text",
+            "placeholder": "Name & phone number or N/A"
+          }
+        ],
+        "schoolRequirements": [
+          {
+            "label": "AFRIQ International Application Processing Fee",
+            "amount": 35000
+          },
+          {
+            "label": "Certified Copy of International Passport (valid min. 2 years)",
+            "amount": 3000
+          },
+          {
+            "label": "Certified Birth Certificate",
+            "amount": 2000
+          },
+          {
+            "label": "GCE / BACC Result Slips (certified & translated if needed)",
+            "amount": 5000
+          },
+          {
+            "label": "Medical Health Certificate (International Standard)",
+            "amount": 4000
+          },
+          {
+            "label": "4 Passport Photos (AFRIQ Standard)",
+            "amount": 1500
+          },
+          {
+            "label": "Uganda Student Visa Processing Guidance & Support (AFRIQ)",
+            "amount": 8000
+          }
+        ]
+      }
+    ]
   }
 ]

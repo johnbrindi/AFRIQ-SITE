@@ -154,11 +154,21 @@ export default function ApplyForm({ university, school, department }: {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ schoolId: school.id, personalInfo: data, requirementsChecked: requirements, totalFee }),
       });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const errBody = await res.json().catch(() => ({}));
+        if (res.status === 401) {
+          alert(errBody.error || 'Your session has expired. Please log out and sign in again.');
+        } else if (res.status === 404) {
+          alert('School not found. Please refresh and try again.');
+        } else {
+          alert('An error occurred while submitting. Please try again.');
+        }
+        return;
+      }
       await generatePDF(data);
       setSuccess(true);
     } catch {
-      alert('An error occurred while submitting. Please try again.');
+      alert('A network error occurred. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }

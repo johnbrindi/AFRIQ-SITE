@@ -11,6 +11,10 @@ export const hardcodedImages: Record<number, { img: string; logo: string }> = {
     img: "/images/private-university-images/YAOUNDÉ INTERNATIONAL BUSINESS SCHOOL, YAOUNDÉ cover image.jpg",
     logo: "/images/private-university-images/YAOUNDÉ INTERNATIONAL BUSINESS SCHOOL, YAOUNDÉ logo.png"
   },
+  107: {
+    img: "/images/private-university-images/CATUC University Cover image.jpeg",
+    logo: "/images/private-university-images/CATUC Logo.jpeg"
+  },
   202: {
     img: "/images/schools-abroad/VERITAS university , Abuja state cover image.jpg",
     logo: "/images/schools-abroad/VERITAS university , Abuja state logo.jpg"
@@ -20,3 +24,4 @@ export const hardcodedImages: Record<number, { img: string; logo: string }> = {
     logo: "/images/schools-abroad/Kampala University Uganda, Ggaba state logo.png"
   }
 };
+

@@ -442,6 +442,35 @@
     }
   },
   {
+    "id": 107,
+    "name": "Catholic University of Cameroon",
+    "short": "CATUC",
+    "loc": "Mankon, Bamenda",
+    "city": "Bamenda",
+    "reg": "North West Region",
+    "tag": "Faith-Based University",
+    "est": "2010",
+    "type": "private",
+    "country": "Cameroon",
+    "img": "/images/private-university-images/CATUC University Cover image.jpeg",
+    "logo": "/images/private-university-images/CATUC Logo.jpeg",
+    "about": "The Catholic University of Cameroon (CATUC), Bamenda, is a private Catholic university established in 2010 and accredited by the Ministry of Higher Education (MINESUP). Located in Mankon, Bamenda, CATUC is guided by the motto 'Fides et Ratio' (Faith and Reason) — embodying its commitment to integrating academic excellence with Catholic values. CATUC offers undergraduate, postgraduate, and professional programmes across six faculties and schools, serving students from across Cameroon and beyond.",
+    "missions": [
+      "Provide quality higher education grounded in Catholic values and academic excellence",
+      "Train graduates who are competent, ethical, and socially responsible",
+      "Foster research and innovation relevant to African development needs",
+      "Promote integral human formation through faith, reason, and service"
+    ],
+    "facts": {
+      "Established": "2010",
+      "Type": "Private Catholic University",
+      "Motto": "Fides et Ratio (Faith & Reason)",
+      "Accreditation": "MINESUP Accredited",
+      "Campuses": "1 (Mankon, Bamenda)",
+      "Language": "English"
+    }
+  },
+  {
     "id": 201,
     "name": "University of Ilorin",
     "short": "UNILORIN",

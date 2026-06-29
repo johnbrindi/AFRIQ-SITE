@@ -3,21 +3,21 @@ import StepsSection from '@/components/portal/StepsSection';
 import AboutSection from '@/components/portal/AboutSection';
 import LandingFooter from '@/components/portal/LandingFooter';
 import Link from 'next/link';
-import { prisma } from '@/lib/db';
-import UniversityCard from '@/components/portal/UniversityCard';
+import { getCachedUniversities } from '@/lib/queries';
+import SmartUniversityCard from '@/components/portal/SmartUniversityCard';
 import { Prisma } from '@prisma/client';
 
-export const dynamic = 'force-dynamic';
+// Revalidate once per hour — eliminates per-request DB calls on every visit
+export const revalidate = 3600;
 
 type UniversityWithSchools = Prisma.UniversityGetPayload<{ include: { schools: true } }>;
 
 export default async function Home() {
   let universities: UniversityWithSchools[] = [];
   try {
-    universities = await prisma.university.findMany({
-      include: { schools: true },
-      take: 8,
-    });
+    const all = await getCachedUniversities();
+    // Show first 8 universities on landing page
+    universities = all.slice(0, 8) as UniversityWithSchools[];
   } catch (error) {
     console.error('Database connection failed:', error);
   }
@@ -63,13 +63,13 @@ export default async function Home() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {universities.map((uni) => (
-                <UniversityCard key={uni.id} uni={uni as any} />
+                <SmartUniversityCard key={uni.id} uni={uni as any} />
               ))}
             </div>
           )}
 
           <div className="text-center">
-            <Link href="/dashboard" className="text-[13px] font-bold text-brand-purple border-[1.5px] border-brand-border bg-white px-10 py-3.5 rounded-xl hover:border-brand-purple hover:bg-brand-pale transition-all inline-flex items-center gap-2 shadow-sm">
+            <Link href="/auth" className="text-[13px] font-bold text-brand-purple border-[1.5px] border-brand-border bg-white px-10 py-3.5 rounded-xl hover:border-brand-purple hover:bg-brand-pale transition-all inline-flex items-center gap-2 shadow-sm">
               Sign Up to Explore All Universities
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </Link>

@@ -1,7 +1,10 @@
 import { notFound } from 'next/navigation';
-import { prisma } from '@/lib/db';
+import { getCachedUniversities } from '@/lib/queries';
 import DetailHero from '@/components/portal/DetailHero';
 import SchoolList from '@/components/portal/SchoolList';
+
+// Revalidate once per hour so data stays fresh without per-request DB fetches
+export const revalidate = 3600;
 
 export default async function UniversityDetailPage({ params }: { params: { id: string } }) {
   const universityId = parseInt(params.id);
@@ -10,10 +13,14 @@ export default async function UniversityDetailPage({ params }: { params: { id: s
     notFound();
   }
 
-  const university = await prisma.university.findUnique({
-    where: { id: universityId },
-    include: { schools: true },
-  });
+  // Use the shared cache to avoid a fresh DB hit on every page view
+  let university: any = null;
+  try {
+    const all = await getCachedUniversities();
+    university = all.find((u) => u.id === universityId) ?? null;
+  } catch {
+    notFound();
+  }
 
   if (!university) {
     notFound();

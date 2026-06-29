@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation';
-import { prisma } from '@/lib/db';
+import { getCachedUniversities } from '@/lib/queries';
 import DepartmentGrid from '@/components/portal/DepartmentGrid';
 import Link from 'next/link';
 
@@ -17,10 +17,14 @@ export default async function DepartmentPage({
     redirect(`/university/${params.id}`);
   }
 
-  const university = await prisma.university.findUnique({
-    where: { id: universityId },
-    include: { schools: true },
-  });
+  // Use cached query to avoid DB hit on every department page load
+  let university: any = null;
+  try {
+    const all = await getCachedUniversities();
+    university = all.find((u) => u.id === universityId) ?? null;
+  } catch {
+    notFound();
+  }
 
   if (!university || !university.schools[schoolIndex]) {
     notFound();

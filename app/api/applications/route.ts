@@ -8,6 +8,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  const userId = parseInt(session.user.id);
+  if (isNaN(userId)) {
+    return NextResponse.json({ error: 'Invalid user session' }, { status: 401 });
+  }
+
   try {
     const body = await request.json();
     const { schoolId, personalInfo, requirementsChecked, totalFee } = body;
@@ -16,9 +21,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'School ID is required' }, { status: 400 });
     }
 
+    // Verify the user actually exists in the database before attempting to create
+    const userExists = await prisma.user.findUnique({ where: { id: userId }, select: { id: true } });
+    if (!userExists) {
+      return NextResponse.json(
+        { error: 'Your session is outdated. Please log out and log back in.' },
+        { status: 401 }
+      );
+    }
+
+    // Verify the school exists
+    const schoolExists = await prisma.school.findUnique({ where: { id: schoolId }, select: { id: true } });
+    if (!schoolExists) {
+      return NextResponse.json({ error: 'School not found' }, { status: 404 });
+    }
+
     const application = await prisma.application.create({
       data: {
-        userId: parseInt(session.user.id),
+        userId,
         schoolId,
         personalInfo: personalInfo || {},
         requirementsChecked: requirementsChecked || [],
